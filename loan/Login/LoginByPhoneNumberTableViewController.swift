@@ -8,9 +8,10 @@
 
 import UIKit
 
-class LoginByPhoneNumberTableViewController: UITableViewController {
+class LoginByPhoneNumberTableViewController: UITableViewController,UITextFieldDelegate {
 
     @IBOutlet weak var sendButton: UIButton!
+    
     var countdownTimer: Timer?
     
     @IBOutlet weak var phoneNumber: UITextField!
@@ -21,7 +22,21 @@ class LoginByPhoneNumberTableViewController: UITableViewController {
 
     @IBOutlet weak var codeViewRef: NNValidationView!
     
-    var codeView: NNValidationView?
+    var isPhoneNumberCorrect:Bool = false {
+        didSet {
+            if isPhoneNumberCorrect,isImageCodeCorrect {
+                enableSendBtn()
+            }
+        }
+    }
+    
+    var isImageCodeCorrect:Bool = false {
+        didSet {
+            if isPhoneNumberCorrect,isImageCodeCorrect {
+                enableSendBtn()
+            }
+        }
+    }
     
     var remainingSeconds: Int = 0 {
         willSet {
@@ -40,13 +55,10 @@ class LoginByPhoneNumberTableViewController: UITableViewController {
         willSet {
             if newValue {
                 countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(LoginByPhoneNumberTableViewController.updateTime(_:)), userInfo: nil, repeats: true)
-                
                 remainingSeconds = 5
             } else {
                 countdownTimer?.invalidate()
                 countdownTimer = nil
-                
-
             }
             
             sendButton.isEnabled = !newValue
@@ -62,15 +74,17 @@ class LoginByPhoneNumberTableViewController: UITableViewController {
         
     }
     
+    func enableSendBtn(){
+        sendButton.isUserInteractionEnabled = true
+        sendButton.setTitleColor(#colorLiteral(red: 0.137254902, green: 0.7490196078, blue: 0.9882352941, alpha: 1), for: .normal)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         sendButton.isUserInteractionEnabled = false
         
-        let iframe = imageCode.frame;
-        
         codeViewRef.setCharNumAndLine(4, 4)
-        
-        print(codeViewRef.charString)
 
         weak var weakSelf = self;
         /// 返回验证码数字
@@ -78,7 +92,25 @@ class LoginByPhoneNumberTableViewController: UITableViewController {
             print("验证码被点击了：%@", weakSelf?.codeViewRef.charString ?? " ")
         }
         
+        phoneNumber.addTarget(self, action: #selector(phoneNumberTextFieldDidChange(_:)), for: .editingChanged)
+        imageCode.addTarget(self, action: #selector(imageCodeTextFieldDidChange(_:)), for: .editingChanged)
     }
+    
+    @objc func phoneNumberTextFieldDidChange(_ textField: UITextField){
+        if let _ = Int(textField.text!),textField.text?.count == 11 {
+            isPhoneNumberCorrect = true
+        }
+        
+    }
+    
+    @objc func imageCodeTextFieldDidChange(_ textField: UITextField){
+        if (textField.text == (codeViewRef?.charString! as! String)){
+            isImageCodeCorrect = true
+        }
+        
+    }
+    
+    
 
 
 

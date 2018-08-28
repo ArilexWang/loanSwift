@@ -20,6 +20,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var signUpBtn: UIButton!
     
+    var loginByPhoneNumberTVC: LoginByPhoneNumberTableViewController?
+    
+    var loginByAccount: LoginByPasswordTableViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,16 +36,38 @@ class ViewController: UIViewController {
         
         view.addSubview(segmentedControl)
         
-        
         loginByPassword.isHidden = true
         
         
     }
+    
+    //登录点击事件
+    @IBAction func signinBtnClick(_ sender: UIButton) {
+        
+        
+        
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    
+    //注册点击事件
+    @IBAction func signupBtnClcik(_ sender: UIButton) {
+        
+        
+        
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "loginByPhoneNumber":
+            self.loginByPhoneNumberTVC = segue.destination as? LoginByPhoneNumberTableViewController
+        case "loginByAccount":
+            self.loginByAccount = segue.destination as? LoginByPasswordTableViewController
+        default:
+            break
+        }
+    }
+    
 
 }
 

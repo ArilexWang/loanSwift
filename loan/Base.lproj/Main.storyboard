@@ -96,6 +96,10 @@
                             <outlet property="delegate" destination="XWz-r0-Tpt" id="Dga-VW-m29"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="accountTextField" destination="0dS-pk-MMq" id="yKt-fx-e8n"/>
+                        <outlet property="passwordTextField" destination="RGO-Qf-y4I" id="Ll9-bA-zzw"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dtt-F5-SlM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1240,7 +1244,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5c-7u-dFG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1186" y="994"/>
+            <point key="canvasLocation" x="-842" y="994"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -1257,7 +1261,7 @@
                                     <constraint firstAttribute="height" constant="200" id="SxZ-8e-TT0"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="gWU-kK-X4E" kind="embed" id="n99-PR-Do6"/>
+                                    <segue destination="gWU-kK-X4E" kind="embed" identifier="loginByPhoneNumber" id="n99-PR-Do6"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdG-p9-Gmv">
@@ -1270,6 +1274,9 @@
                                 <state key="normal" title="登录">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signinBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZWO-7f-K5b"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Kg-n5-ejS">
                                 <rect key="frame" x="16" y="505" width="343" height="50"/>
@@ -1281,6 +1288,9 @@
                                 <state key="normal" title="注册">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signupBtnClcik:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FZL-Md-5bi"/>
+                                </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vll-n5-h4Q">
                                 <rect key="frame" x="0.0" y="220" width="375" height="153"/>
@@ -1288,7 +1298,7 @@
                                     <constraint firstAttribute="height" constant="153" id="zlE-LU-cff"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="XWz-r0-Tpt" kind="embed" id="3FT-XF-tXP"/>
+                                    <segue destination="XWz-r0-Tpt" kind="embed" identifier="loginByAccount" id="3FT-XF-tXP"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -1324,7 +1334,7 @@
         <!--Login By Phone Number Table View Controller-->
         <scene sceneID="7G7-by-PG5">
             <objects>
-                <tableViewController id="gWU-kK-X4E" customClass="LoginByPhoneNumberTableViewController" customModule="loan" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="loginByPhone" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gWU-kK-X4E" customClass="LoginByPhoneNumberTableViewController" customModule="loan" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zy7-WC-JwM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1353,7 +1363,7 @@
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" textContentType="tel"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
