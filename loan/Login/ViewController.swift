@@ -24,8 +24,12 @@ class ViewController: UIViewController {
     
     var loginByAccount: LoginByPasswordTableViewController?
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.isNavigationBarHidden = false
         
         let titles = ["手机号快捷登录", "账号密码登录"]
         let frame = CGRect(x: 5, y: 170, width: view.frame.width - 10, height: 60)
@@ -63,6 +67,8 @@ class ViewController: UIViewController {
             self.loginByPhoneNumberTVC = segue.destination as? LoginByPhoneNumberTableViewController
         case "loginByAccount":
             self.loginByAccount = segue.destination as? LoginByPasswordTableViewController
+        case "segueToSignUp":
+            navigationItem.title = ""
         default:
             break
         }

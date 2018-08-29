@@ -20,6 +20,10 @@
 		8C49E713213534060047D17A /* exam.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C49E710213534040047D17A /* exam.png */; };
 		8C49E714213534060047D17A /* apply.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C49E711213534050047D17A /* apply.png */; };
 		8C49E71921353CA80047D17A /* NNValidationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C49E71821353CA80047D17A /* NNValidationView.m */; };
+		8C49E71C213674910047D17A /* SelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C49E71B213674910047D17A /* SelfViewController.swift */; };
+		8C49E71E2136D2DD0047D17A /* ResetPasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C49E71D2136D2DD0047D17A /* ResetPasswordTableViewController.swift */; };
+		8C49E7202136D51E0047D17A /* SelfMsgTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C49E71F2136D51E0047D17A /* SelfMsgTableViewController.swift */; };
+		8C49E7222136D52B0047D17A /* OtherMsgTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C49E7212136D52B0047D17A /* OtherMsgTableViewController.swift */; };
 		8C579890213240EB006AC4D9 /* idback.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C57988E213240EA006AC4D9 /* idback.png */; };
 		8C579891213240EB006AC4D9 /* idfont.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C57988F213240EA006AC4D9 /* idfont.png */; };
 		8C57989321324664006AC4D9 /* idhold.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C57989221324664006AC4D9 /* idhold.png */; };
@@ -38,9 +42,7 @@
 		8CB6B12A212EDC1E007CF2D3 /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB6B129212EDC1E007CF2D3 /* SignUpTableViewController.swift */; };
 		8CB6B133212EEBB2007CF2D3 /* mainpage_unselected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB6B130212EEBB2007CF2D3 /* mainpage_unselected@3x.png */; };
 		8CB6B134212EEBB2007CF2D3 /* mainpage_unselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB6B131212EEBB2007CF2D3 /* mainpage_unselected@2x.png */; };
-		8CB6B135212EEBB2007CF2D3 /* mainpage_unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB6B132212EEBB2007CF2D3 /* mainpage_unselected.png */; };
 		8CB6B139212EEC50007CF2D3 /* selfBtn_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB6B136212EEC50007CF2D3 /* selfBtn_selected@2x.png */; };
-		8CB6B13A212EEC50007CF2D3 /* selfBtn_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB6B137212EEC50007CF2D3 /* selfBtn_selected.png */; };
 		8CB6B13B212EEC50007CF2D3 /* selfBtn_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB6B138212EEC50007CF2D3 /* selfBtn_selected@3x.png */; };
 		8CB6B13F212EEE32007CF2D3 /* selfBtn_unselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB6B13C212EEE31007CF2D3 /* selfBtn_unselected@2x.png */; };
 		8CB6B140212EEE32007CF2D3 /* selfBtn_unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB6B13D212EEE32007CF2D3 /* selfBtn_unselected.png */; };
@@ -70,6 +72,10 @@
 		8C49E71621353CA70047D17A /* loan-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "loan-Bridging-Header.h"; sourceTree = "<group>"; };
 		8C49E71721353CA80047D17A /* NNValidationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNValidationView.h; sourceTree = "<group>"; };
 		8C49E71821353CA80047D17A /* NNValidationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNValidationView.m; sourceTree = "<group>"; };
+		8C49E71B213674910047D17A /* SelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfViewController.swift; sourceTree = "<group>"; };
+		8C49E71D2136D2DD0047D17A /* ResetPasswordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordTableViewController.swift; sourceTree = "<group>"; };
+		8C49E71F2136D51E0047D17A /* SelfMsgTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfMsgTableViewController.swift; sourceTree = "<group>"; };
+		8C49E7212136D52B0047D17A /* OtherMsgTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherMsgTableViewController.swift; sourceTree = "<group>"; };
 		8C57988E213240EA006AC4D9 /* idback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = idback.png; sourceTree = "<group>"; };
 		8C57988F213240EA006AC4D9 /* idfont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = idfont.png; sourceTree = "<group>"; };
 		8C57989221324664006AC4D9 /* idhold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = idhold.png; sourceTree = "<group>"; };
@@ -90,9 +96,7 @@
 		8CB6B129212EDC1E007CF2D3 /* SignUpTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
 		8CB6B130212EEBB2007CF2D3 /* mainpage_unselected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mainpage_unselected@3x.png"; sourceTree = "<group>"; };
 		8CB6B131212EEBB2007CF2D3 /* mainpage_unselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mainpage_unselected@2x.png"; sourceTree = "<group>"; };
-		8CB6B132212EEBB2007CF2D3 /* mainpage_unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mainpage_unselected.png; path = ../../../../../Desktop/mainpage_unselected.png; sourceTree = "<group>"; };
 		8CB6B136212EEC50007CF2D3 /* selfBtn_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selfBtn_selected@2x.png"; sourceTree = "<group>"; };
-		8CB6B137212EEC50007CF2D3 /* selfBtn_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = selfBtn_selected.png; path = ../../../../../Desktop/selfBtn_selected.png; sourceTree = "<group>"; };
 		8CB6B138212EEC50007CF2D3 /* selfBtn_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selfBtn_selected@3x.png"; sourceTree = "<group>"; };
 		8CB6B13C212EEE31007CF2D3 /* selfBtn_unselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selfBtn_unselected@2x.png"; sourceTree = "<group>"; };
 		8CB6B13D212EEE32007CF2D3 /* selfBtn_unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selfBtn_unselected.png; sourceTree = "<group>"; };
@@ -147,6 +151,16 @@
 			path = Thirdpart;
 			sourceTree = "<group>";
 		};
+		8C49E71A2136743A0047D17A /* Self */ = {
+			isa = PBXGroup;
+			children = (
+				8C49E71B213674910047D17A /* SelfViewController.swift */,
+				8C49E71F2136D51E0047D17A /* SelfMsgTableViewController.swift */,
+				8C49E7212136D52B0047D17A /* OtherMsgTableViewController.swift */,
+			);
+			path = Self;
+			sourceTree = "<group>";
+		};
 		8CB6B0F7212D9348007CF2D3 = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +182,7 @@
 		8CB6B102212D9348007CF2D3 /* loan */ = {
 			isa = PBXGroup;
 			children = (
+				8C49E71A2136743A0047D17A /* Self */,
 				8C49E71521353C7B0047D17A /* Thirdpart */,
 				8C49E704213520290047D17A /* Main */,
 				8CB6B126212EDB18007CF2D3 /* SignUp */,
@@ -213,6 +228,7 @@
 				8CB6B105212D9348007CF2D3 /* ViewController.swift */,
 				8CB6B120212D9FE4007CF2D3 /* LoginByPhoneNumberTableViewController.swift */,
 				8CB6B124212ED6DD007CF2D3 /* LoginByPasswordTableViewController.swift */,
+				8C49E71D2136D2DD0047D17A /* ResetPasswordTableViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -239,10 +255,8 @@
 				8CB6B13D212EEE32007CF2D3 /* selfBtn_unselected.png */,
 				8CB6B13C212EEE31007CF2D3 /* selfBtn_unselected@2x.png */,
 				8CB6B13E212EEE32007CF2D3 /* selfBtn_unselected@3x.png */,
-				8CB6B137212EEC50007CF2D3 /* selfBtn_selected.png */,
 				8CB6B136212EEC50007CF2D3 /* selfBtn_selected@2x.png */,
 				8CB6B138212EEC50007CF2D3 /* selfBtn_selected@3x.png */,
-				8CB6B132212EEBB2007CF2D3 /* mainpage_unselected.png */,
 				8CB6B131212EEBB2007CF2D3 /* mainpage_unselected@2x.png */,
 				8CB6B130212EEBB2007CF2D3 /* mainpage_unselected@3x.png */,
 			);
@@ -368,9 +382,7 @@
 				8CB6B14F21300A33007CF2D3 /* msgcard.png in Resources */,
 				8CB6B10B212D9349007CF2D3 /* Assets.xcassets in Resources */,
 				8CB6B146212EF513007CF2D3 /* paybackImg.png in Resources */,
-				8CB6B135212EEBB2007CF2D3 /* mainpage_unselected.png in Resources */,
 				8C579891213240EB006AC4D9 /* idfont.png in Resources */,
-				8CB6B13A212EEC50007CF2D3 /* selfBtn_selected.png in Resources */,
 				8C579890213240EB006AC4D9 /* idback.png in Resources */,
 				8C49E70D21352F950047D17A /* check.png in Resources */,
 				8CB6B11C212D9A6D007CF2D3 /* phone.png in Resources */,
@@ -429,8 +441,12 @@
 			files = (
 				8CB6B121212D9FE4007CF2D3 /* LoginByPhoneNumberTableViewController.swift in Sources */,
 				8CB6B12A212EDC1E007CF2D3 /* SignUpTableViewController.swift in Sources */,
+				8C49E7202136D51E0047D17A /* SelfMsgTableViewController.swift in Sources */,
+				8C49E71E2136D2DD0047D17A /* ResetPasswordTableViewController.swift in Sources */,
+				8C49E7222136D52B0047D17A /* OtherMsgTableViewController.swift in Sources */,
 				8CB6B125212ED6DD007CF2D3 /* LoginByPasswordTableViewController.swift in Sources */,
 				8CB6B106212D9348007CF2D3 /* ViewController.swift in Sources */,
+				8C49E71C213674910047D17A /* SelfViewController.swift in Sources */,
 				8CB6B104212D9348007CF2D3 /* AppDelegate.swift in Sources */,
 				8C49E7062135205A0047D17A /* DesignableSlider.swift in Sources */,
 				8CB6B128212EDB49007CF2D3 /* SignUpViewController.swift in Sources */,
