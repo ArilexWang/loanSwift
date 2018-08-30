@@ -36,6 +36,7 @@
 		8C9770B3213820A600D1E8BA /* LoanListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9770B2213820A600D1E8BA /* LoanListViewController.swift */; };
 		8C9770B52138251A00D1E8BA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9770B42138251A00D1E8BA /* MainViewController.swift */; };
 		8C9770B72138264900D1E8BA /* LoanConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9770B62138264900D1E8BA /* LoanConfirmViewController.swift */; };
+		8C9770B921383B8000D1E8BA /* LoanDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9770B821383B8000D1E8BA /* LoanDetailViewController.swift */; };
 		8CB6B104212D9348007CF2D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB6B103212D9348007CF2D3 /* AppDelegate.swift */; };
 		8CB6B106212D9348007CF2D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB6B105212D9348007CF2D3 /* ViewController.swift */; };
 		8CB6B109212D9348007CF2D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB6B107212D9348007CF2D3 /* Main.storyboard */; };
@@ -97,6 +98,7 @@
 		8C9770B2213820A600D1E8BA /* LoanListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanListViewController.swift; sourceTree = "<group>"; };
 		8C9770B42138251A00D1E8BA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8C9770B62138264900D1E8BA /* LoanConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanConfirmViewController.swift; sourceTree = "<group>"; };
+		8C9770B821383B8000D1E8BA /* LoanDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanDetailViewController.swift; sourceTree = "<group>"; };
 		8CB6B100212D9348007CF2D3 /* loan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CB6B103212D9348007CF2D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CB6B105212D9348007CF2D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			children = (
 				8C9770B2213820A600D1E8BA /* LoanListViewController.swift */,
 				8C9770B62138264900D1E8BA /* LoanConfirmViewController.swift */,
+				8C9770B821383B8000D1E8BA /* LoanDetailViewController.swift */,
 			);
 			path = Loan;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				8CB6B128212EDB49007CF2D3 /* SignUpViewController.swift in Sources */,
 				8C9770B72138264900D1E8BA /* LoanConfirmViewController.swift in Sources */,
 				8C9770B52138251A00D1E8BA /* MainViewController.swift in Sources */,
+				8C9770B921383B8000D1E8BA /* LoanDetailViewController.swift in Sources */,
 				8C49E71921353CA80047D17A /* NNValidationView.m in Sources */,
 				8C9770A72137CA1500D1E8BA /* SelfDetailMessageTableViewController.swift in Sources */,
 			);

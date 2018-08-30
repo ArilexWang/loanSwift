@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         self.navigationController?.isNavigationBarHidden = true
-        // Do any additional setup after loading the view.
+        
     }
 
     @IBAction func loanBtnClick(_ sender: UIButton) {
