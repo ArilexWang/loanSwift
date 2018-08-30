@@ -12,6 +12,10 @@ class SelfMessageViewController: UIViewController,SelfMessageVCGetSignalDelegate
     
     var selfDetailMsgTVC: SelfDetailMessageTableViewController?
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.title = "我的资料"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = false

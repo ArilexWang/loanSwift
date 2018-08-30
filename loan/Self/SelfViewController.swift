@@ -62,7 +62,6 @@ class SelfViewController: UIViewController,GetSignalDelegate {
     }
     
     func getSignal(controller: OtherMsgTableViewController, indexPath: IndexPath) {
-        print(indexPath.row)
         switch indexPath.row {
         case 0:
             performSegue(withIdentifier: "segueToResetPassword", sender: nil)
@@ -72,10 +71,11 @@ class SelfViewController: UIViewController,GetSignalDelegate {
     }
     
     func getSignalFromSelfTVC(controller: SelfMsgTableViewController, indexPath: IndexPath) {
-        print(indexPath.row)
         switch indexPath.row {
         case 0:
             performSegue(withIdentifier: "segueToSelfMsgVC", sender: nil)
+        case 1:
+            performSegue(withIdentifier: "segueToLoanListTVC", sender: nil)
         default:
             break
         }

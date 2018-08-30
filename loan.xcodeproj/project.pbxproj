@@ -31,6 +31,9 @@
 		8C9770A52137C4EC00D1E8BA /* SelfMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9770A42137C4EC00D1E8BA /* SelfMessageViewController.swift */; };
 		8C9770A72137CA1500D1E8BA /* SelfDetailMessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9770A62137CA1500D1E8BA /* SelfDetailMessageTableViewController.swift */; };
 		8C9770A92137CA8500D1E8BA /* SelfDetailMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9770A82137CA8500D1E8BA /* SelfDetailMessageViewController.swift */; };
+		8C9770AE21381B8300D1E8BA /* clickTo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C9770AC21381B8300D1E8BA /* clickTo.png */; };
+		8C9770B021381CB400D1E8BA /* loanBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C9770AF21381CB400D1E8BA /* loanBtn.png */; };
+		8C9770B3213820A600D1E8BA /* LoanListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9770B2213820A600D1E8BA /* LoanListViewController.swift */; };
 		8CB6B104212D9348007CF2D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB6B103212D9348007CF2D3 /* AppDelegate.swift */; };
 		8CB6B106212D9348007CF2D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB6B105212D9348007CF2D3 /* ViewController.swift */; };
 		8CB6B109212D9348007CF2D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB6B107212D9348007CF2D3 /* Main.storyboard */; };
@@ -87,6 +90,9 @@
 		8C9770A42137C4EC00D1E8BA /* SelfMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfMessageViewController.swift; sourceTree = "<group>"; };
 		8C9770A62137CA1500D1E8BA /* SelfDetailMessageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfDetailMessageTableViewController.swift; sourceTree = "<group>"; };
 		8C9770A82137CA8500D1E8BA /* SelfDetailMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfDetailMessageViewController.swift; sourceTree = "<group>"; };
+		8C9770AC21381B8300D1E8BA /* clickTo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clickTo.png; sourceTree = "<group>"; };
+		8C9770AF21381CB400D1E8BA /* loanBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loanBtn.png; path = ../../../../../Desktop/loanBtn.png; sourceTree = "<group>"; };
+		8C9770B2213820A600D1E8BA /* LoanListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanListViewController.swift; sourceTree = "<group>"; };
 		8CB6B100212D9348007CF2D3 /* loan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CB6B103212D9348007CF2D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CB6B105212D9348007CF2D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +178,23 @@
 			path = Self;
 			sourceTree = "<group>";
 		};
+		8C9770AA21381B6F00D1E8BA /* loan */ = {
+			isa = PBXGroup;
+			children = (
+				8C9770AF21381CB400D1E8BA /* loanBtn.png */,
+				8C9770AC21381B8300D1E8BA /* clickTo.png */,
+			);
+			path = loan;
+			sourceTree = "<group>";
+		};
+		8C9770B12138208F00D1E8BA /* Loan */ = {
+			isa = PBXGroup;
+			children = (
+				8C9770B2213820A600D1E8BA /* LoanListViewController.swift */,
+			);
+			path = Loan;
+			sourceTree = "<group>";
+		};
 		8CB6B0F7212D9348007CF2D3 = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +216,7 @@
 		8CB6B102212D9348007CF2D3 /* loan */ = {
 			isa = PBXGroup;
 			children = (
+				8C9770B12138208F00D1E8BA /* Loan */,
 				8C49E71A2136743A0047D17A /* Self */,
 				8C49E71521353C7B0047D17A /* Thirdpart */,
 				8C49E704213520290047D17A /* Main */,
@@ -211,6 +235,7 @@
 		8CB6B117212D9A48007CF2D3 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				8C9770AA21381B6F00D1E8BA /* loan */,
 				8CB6B14A21300A25007CF2D3 /* Information */,
 				8CB6B142212EF4FC007CF2D3 /* Self */,
 				8CB6B12B212EE9DD007CF2D3 /* Main */,
@@ -392,6 +417,7 @@
 				8CB6B15021300A33007CF2D3 /* bankcard.png in Resources */,
 				8C49E714213534060047D17A /* apply.png in Resources */,
 				8CB6B14F21300A33007CF2D3 /* msgcard.png in Resources */,
+				8C9770B021381CB400D1E8BA /* loanBtn.png in Resources */,
 				8CB6B10B212D9349007CF2D3 /* Assets.xcassets in Resources */,
 				8CB6B146212EF513007CF2D3 /* paybackImg.png in Resources */,
 				8C579891213240EB006AC4D9 /* idfont.png in Resources */,
@@ -402,6 +428,7 @@
 				8C49E70A2135275D0047D17A /* plus.png in Resources */,
 				8CB6B15221300E36007CF2D3 /* morecard.png in Resources */,
 				8CB6B109212D9348007CF2D3 /* Main.storyboard in Resources */,
+				8C9770AE21381B8300D1E8BA /* clickTo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +484,7 @@
 				8CB6B12A212EDC1E007CF2D3 /* SignUpTableViewController.swift in Sources */,
 				8C49E7202136D51E0047D17A /* SelfMsgTableViewController.swift in Sources */,
 				8C49E71E2136D2DD0047D17A /* ResetPasswordTableViewController.swift in Sources */,
+				8C9770B3213820A600D1E8BA /* LoanListViewController.swift in Sources */,
 				8C49E7222136D52B0047D17A /* OtherMsgTableViewController.swift in Sources */,
 				8CB6B125212ED6DD007CF2D3 /* LoginByPasswordTableViewController.swift in Sources */,
 				8CB6B106212D9348007CF2D3 /* ViewController.swift in Sources */,
