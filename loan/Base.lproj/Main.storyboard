@@ -851,7 +851,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Jr-VB-3bi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="996" y="873"/>
+            <point key="canvasLocation" x="996" y="927"/>
         </scene>
         <!--找回密码-->
         <scene sceneID="LBx-kx-SeH">
@@ -2038,7 +2038,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hlR-vd-BUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3548" y="-45.42728635682159"/>
+            <point key="canvasLocation" x="3548" y="-45"/>
         </scene>
         <!--Sign Up Table View Controller-->
         <scene sceneID="eB3-KI-f84">
@@ -2244,7 +2244,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A7w-IL-fOu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4352.8000000000002" y="-46.776611694152926"/>
+            <point key="canvasLocation" x="4393" y="55"/>
         </scene>
         <!--资料信息-->
         <scene sceneID="y0r-Ns-3GK">
@@ -2858,13 +2858,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X5p-Wh-7x3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3548" y="1471"/>
+            <point key="canvasLocation" x="3548" y="1424"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="DSK-9r-yft">
             <objects>
                 <tableViewController id="HZI-F9-f21" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Cps-7K-uFw">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Cps-7K-uFw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3045,7 +3045,7 @@
         <scene sceneID="2W8-Tz-Gbi">
             <objects>
                 <tableViewController id="0Ks-5n-c3q" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="EmH-Vw-jAK">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="EmH-Vw-jAK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
