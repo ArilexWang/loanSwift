@@ -8,10 +8,8 @@
 
 import UIKit
 
-class SelfViewController: UIViewController {
-
+class SelfViewController: UIViewController,GetSignalDelegate {
     
-
     @IBOutlet weak var lockImg: UIImageView!
     
     @IBOutlet weak var selfMsgContainView: UIView!
@@ -24,6 +22,7 @@ class SelfViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     override func viewDidLoad() {
@@ -47,19 +46,40 @@ class SelfViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        navigationItem.title = ""
         switch segue.identifier {
-        case "segueToLogin":
-            navigationItem.title = ""
         case "segueToSelfMsg":
-            self.selfMsgTVC = segue.destination as? SelfMsgTableViewController
+            let destinationVC = segue.destination as? SelfMsgTableViewController
+            self.selfMsgTVC = destinationVC
+            destinationVC?.delegate = self
         case "segueToOtherMsg":
-            self.otherMsgTVC = segue.destination as? OtherMsgTableViewController
+            let des = segue.destination as? OtherMsgTableViewController
+            des?.delegate = self
+            self.otherMsgTVC = des
+         default:
+            break
+        }
+    }
+    
+    func getSignal(controller: OtherMsgTableViewController, indexPath: IndexPath) {
+        print(indexPath.row)
+        switch indexPath.row {
+        case 0:
+            performSegue(withIdentifier: "segueToResetPassword", sender: nil)
         default:
             break
         }
-        
-        
     }
+    
+    func getSignalFromSelfTVC(controller: SelfMsgTableViewController, indexPath: IndexPath) {
+        print(indexPath.row)
+        switch indexPath.row {
+        case 0:
+            performSegue(withIdentifier: "segueToSelfMsgVC", sender: nil)
+        default:
+            break
+        }
+    }
+    
 
 }

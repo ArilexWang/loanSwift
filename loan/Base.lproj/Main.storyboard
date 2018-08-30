@@ -178,43 +178,45 @@
                         <outlet property="otherMsgContainView" destination="xyz-gg-aKv" id="DJQ-oq-eEe"/>
                         <outlet property="selfMsgContainView" destination="hSX-D5-PAE" id="4EV-ho-Gco"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="segueToLogin" id="pD2-km-i5a"/>
+                        <segue destination="uq9-x7-kZI" kind="show" identifier="segueToResetPassword" id="Sgl-Ql-bbg"/>
+                        <segue destination="t7g-nE-bcn" kind="show" identifier="segueToSelfMsgVC" id="YM8-rP-WWa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bYR-aH-fa5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="124" y="1047"/>
         </scene>
-        <!--View Controller-->
+        <!--我的资料-->
         <scene sceneID="SaM-WX-l4T">
             <objects>
-                <viewController id="t7g-nE-bcn" sceneMemberID="viewController">
+                <viewController title="我的资料" id="t7g-nE-bcn" customClass="SelfMessageViewController" customModule="loan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iDF-wo-XkD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="只需3分钟完成资料验证，即可申请借款哦~" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gth-bm-Cqg">
-                                <rect key="frame" x="50" y="36" width="275" height="17"/>
+                                <rect key="frame" x="50" y="80" width="275" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7T-57-PLa">
-                                <rect key="frame" x="0.0" y="73" width="375" height="240"/>
+                                <rect key="frame" x="0.0" y="117" width="375" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="Fiw-Rg-IAY"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="DZu-Ek-0SO" kind="embed" id="5SY-iT-rg7"/>
+                                    <segue destination="DZu-Ek-0SO" kind="embed" identifier="segueToDetailMsgTVC" id="5SY-iT-rg7"/>
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="补充资料可增加审核通过几率" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bz7-9E-fGi">
-                                <rect key="frame" x="94" y="321" width="186" height="17"/>
+                                <rect key="frame" x="94" y="365" width="186" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hV-rc-ld8">
-                                <rect key="frame" x="0.0" y="346" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="390" width="375" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="PnX-0r-emt"/>
                                 </constraints>
@@ -238,16 +240,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vw5-aj-chJ"/>
                     </view>
+                    <connections>
+                        <segue destination="bqc-zr-gmO" kind="show" identifier="segueToIDVC" id="XD1-2g-f4K"/>
+                        <segue destination="Pou-k9-C8r" kind="show" identifier="segueToCustomMessageVC" id="Rir-UJ-qSi"/>
+                        <segue destination="Hqg-GY-ml3" kind="show" identifier="segueToBankCardVC" id="ERc-8a-GIy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="keN-ap-Byu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2609" y="779"/>
+            <point key="canvasLocation" x="1769" y="683"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Self Detail Message Table View Controller-->
         <scene sceneID="4Jh-BO-ERA">
             <objects>
-                <tableViewController id="DZu-Ek-0SO" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3Bt-Zz-22L">
+                <tableViewController id="DZu-Ek-0SO" customClass="SelfDetailMessageTableViewController" customModule="loan" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3Bt-Zz-22L">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -385,7 +392,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BcC-qK-K0N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3465" y="560"/>
+            <point key="canvasLocation" x="2609" y="543"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="bjg-a8-UXo">
@@ -449,7 +456,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P73-IU-YoK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3465" y="803"/>
+            <point key="canvasLocation" x="2609" y="873"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="II4-aE-rhP">
@@ -532,18 +539,18 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ioL-Ee-raq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5217" y="-291"/>
+            <point key="canvasLocation" x="5257" y="-46"/>
         </scene>
-        <!--View Controller-->
+        <!--身份信息-->
         <scene sceneID="LD5-F0-WM0">
             <objects>
-                <viewController id="bqc-zr-gmO" sceneMemberID="viewController">
+                <viewController title="身份信息" id="bqc-zr-gmO" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4E4-LJ-Ih4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yru-jK-98R">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Q1-N3-MZR">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="881"/>
@@ -731,10 +738,10 @@
             </objects>
             <point key="canvasLocation" x="4348" y="-45.42728635682159"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Self Msg Table View Controller-->
         <scene sceneID="w3X-0B-gbH">
             <objects>
-                <tableViewController id="BVp-Zw-Pkw" sceneMemberID="viewController">
+                <tableViewController id="BVp-Zw-Pkw" customClass="SelfMsgTableViewController" customModule="loan" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="A2H-hd-qV6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -843,31 +850,52 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Jr-VB-3bi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="996" y="778"/>
+            <point key="canvasLocation" x="996" y="1046"/>
         </scene>
-        <!--View Controller-->
+        <!--找回密码-->
         <scene sceneID="LBx-kx-SeH">
             <objects>
-                <viewController id="uq9-x7-kZI" sceneMemberID="viewController">
+                <viewController title="找回密码" id="uq9-x7-kZI" customClass="ResetPasswordViewController" customModule="loan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d3p-rr-755">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdM-x8-f5I">
-                                <rect key="frame" x="0.0" y="20" width="375" height="240"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mdM-x8-f5I">
+                                <rect key="frame" x="0.0" y="64" width="375" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="dYg-er-vWt"/>
+                                </constraints>
                                 <connections>
                                     <segue destination="N7b-Oq-edA" kind="embed" id="YsS-QJ-cjP"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUd-e9-zEz">
+                                <rect key="frame" x="16" y="324" width="343" height="50"/>
+                                <color key="backgroundColor" red="0.13725490200000001" green="0.74901960779999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9in-az-dsj"/>
+                                    <constraint firstAttribute="width" constant="343" id="IRB-mL-BkH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="完成">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mdM-x8-f5I" firstAttribute="leading" secondItem="ELt-gR-4C9" secondAttribute="leading" id="0aU-FC-qJe"/>
+                            <constraint firstItem="mdM-x8-f5I" firstAttribute="top" secondItem="ELt-gR-4C9" secondAttribute="top" id="62i-ca-2jn"/>
+                            <constraint firstItem="IUd-e9-zEz" firstAttribute="centerX" secondItem="ELt-gR-4C9" secondAttribute="centerX" id="E1z-eP-qNj"/>
+                            <constraint firstItem="IUd-e9-zEz" firstAttribute="top" secondItem="mdM-x8-f5I" secondAttribute="bottom" constant="20" id="PKw-2B-Lez"/>
+                            <constraint firstItem="mdM-x8-f5I" firstAttribute="trailing" secondItem="ELt-gR-4C9" secondAttribute="trailing" id="ktm-Rw-Op4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ELt-gR-4C9"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvU-gC-TkD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1825" y="1017"/>
+            <point key="canvasLocation" x="1769" y="1413"/>
         </scene>
         <!--首页-->
         <scene sceneID="Fyw-i3-bl3">
@@ -1255,7 +1283,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZ8-na-wO0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-825" y="264"/>
+            <point key="canvasLocation" x="124" y="269"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Yuh-ZZ-xoq">
@@ -1764,7 +1792,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A7w-IL-fOu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3464.8000000000002" y="-45.877061469265371"/>
+            <point key="canvasLocation" x="3415" y="-46"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="y0r-Ns-3GK">
@@ -1775,7 +1803,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4A-Nd-SeR">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2R7-IF-OB4">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1081"/>
@@ -1882,7 +1910,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gDG-aL-ZC8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4348" y="708"/>
+            <point key="canvasLocation" x="4348" y="682"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="Nho-c6-G1M">
@@ -2313,7 +2341,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bjo-24-azK">
-                                <rect key="frame" x="0.0" y="20" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="ffC-8O-O1W"/>
                                 </constraints>
@@ -2322,7 +2350,7 @@
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3C-6P-WFq">
-                                <rect key="frame" x="0.0" y="148" width="375" height="120"/>
+                                <rect key="frame" x="0.0" y="192" width="375" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="wC6-Uw-gmC"/>
                                 </constraints>
@@ -2331,7 +2359,7 @@
                                 </connections>
                             </containerView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="zXT-Wv-439">
-                                <rect key="frame" x="16" y="288" width="314.5" height="34"/>
+                                <rect key="frame" x="16" y="332" width="314.5" height="34"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="温馨提示：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJs-3c-e8L">
                                         <rect key="frame" x="0.0" y="0.0" width="71.5" height="17"/>
@@ -2348,7 +2376,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kz3-s5-nBq">
-                                <rect key="frame" x="16" y="352" width="343" height="50"/>
+                                <rect key="frame" x="16" y="396" width="343" height="50"/>
                                 <color key="backgroundColor" red="0.13725490200000001" green="0.74901960779999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="u3a-2C-5dd"/>
@@ -2378,7 +2406,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X5p-Wh-7x3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2609" y="1493"/>
+            <point key="canvasLocation" x="4348" y="1468"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="DSK-9r-yft">
@@ -2442,7 +2470,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dP3-ss-WgB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3465" y="1338"/>
+            <point key="canvasLocation" x="5257" y="1417"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="CqD-aq-7fQ">
@@ -2634,7 +2662,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nao-DZ-sj8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3465" y="1539"/>
+            <point key="canvasLocation" x="5257" y="1659"/>
         </scene>
         <!--Other Msg Table View Controller-->
         <scene sceneID="89l-Et-Jea">
@@ -2721,7 +2749,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cV-ZR-LR2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="996" y="1210"/>
+            <point key="canvasLocation" x="996" y="1330"/>
         </scene>
         <!--我-->
         <scene sceneID="cYI-d5-EuL">
@@ -2767,8 +2795,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CPV-vm-zaA">
-                                                    <rect key="frame" x="119" y="14" width="96" height="30"/>
+                                                    <rect key="frame" x="119" y="14" width="180" height="30"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="width" constant="180" id="cxS-jr-j5U"/>
                                                         <constraint firstAttribute="height" constant="30" id="dJU-Bs-wuz"/>
                                                     </constraints>
                                                     <nil key="textColor"/>
@@ -2779,7 +2808,6 @@
                                             <constraints>
                                                 <constraint firstItem="CPV-vm-zaA" firstAttribute="leading" secondItem="8Ia-7O-Jfi" secondAttribute="trailing" constant="51" id="4fF-sq-xbw"/>
                                                 <constraint firstItem="8Ia-7O-Jfi" firstAttribute="centerY" secondItem="jZA-Yh-hKv" secondAttribute="centerY" id="ndh-At-d4B"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CPV-vm-zaA" secondAttribute="trailing" constant="20" symbolic="YES" id="pWj-14-0Fa"/>
                                                 <constraint firstItem="8Ia-7O-Jfi" firstAttribute="leading" secondItem="jZA-Yh-hKv" secondAttribute="leadingMargin" id="wiE-hp-ivP"/>
                                                 <constraint firstItem="CPV-vm-zaA" firstAttribute="centerY" secondItem="8Ia-7O-Jfi" secondAttribute="centerY" id="yr1-jT-dt3"/>
                                             </constraints>
@@ -2851,6 +2879,9 @@
                                                     <state key="normal" title="获取验证码">
                                                         <color key="titleColor" red="0.88988894220000003" green="0.89812690019999997" blue="0.89802354569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="sendBtnClick:" destination="N7b-Oq-edA" eventType="touchUpInside" id="4nA-8S-yO9"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -2879,7 +2910,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="请设置6-16位密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ucu-lX-j2T">
-                                                    <rect key="frame" x="119" y="21" width="120.5" height="17"/>
+                                                    <rect key="frame" x="119" y="21" width="180" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="180" id="oeN-AS-9fv"/>
+                                                    </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
@@ -2902,10 +2936,18 @@
                             <outlet property="delegate" destination="N7b-Oq-edA" id="fmT-rC-z6w"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="accessCodeTF" destination="Dxt-2C-Qvx" id="2Km-o1-Av4"/>
+                        <outlet property="imgCodeTF" destination="W0L-7h-Jev" id="qhs-WR-iol"/>
+                        <outlet property="imgCodeView" destination="YcM-Z4-aKn" id="7xx-gv-0hN"/>
+                        <outlet property="passwordTF" destination="ucu-lX-j2T" id="kXN-Pl-fPu"/>
+                        <outlet property="phoneNumberTF" destination="CPV-vm-zaA" id="BCr-uj-hgc"/>
+                        <outlet property="sendButton" destination="5vl-V7-Zx7" id="BN7-7S-wUd"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51k-FY-KlM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1825" y="1592"/>
+            <point key="canvasLocation" x="2609" y="1412"/>
         </scene>
     </scenes>
     <resources>
