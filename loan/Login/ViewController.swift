@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationController?.isNavigationBarHidden = false
+        self.tabBarController?.tabBar.isHidden = true
         
         let titles = ["手机号快捷登录", "账号密码登录"]
         let frame = CGRect(x: 5, y: 170, width: view.frame.width - 10, height: 60)
