@@ -16,7 +16,9 @@ class SelfViewController: UIViewController,GetSignalDelegate {
     
     @IBOutlet weak var otherMsgContainView: UIView!
     
+    @IBOutlet weak var loginLbl: UILabel!
     var selfMsgTVC: SelfMsgTableViewController?
+    
     var otherMsgTVC: OtherMsgTableViewController?
     
     
@@ -24,6 +26,19 @@ class SelfViewController: UIViewController,GetSignalDelegate {
         self.navigationController?.isNavigationBarHidden = true
         self.tabBarController?.tabBar.isHidden = false
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if isLogin {
+            otherMsgContainView.isHidden = false
+            loginLbl.text = userInfo.phone
+            lockImg.isUserInteractionEnabled = false
+        } else {
+            otherMsgContainView.isHidden = true
+            loginLbl.text = "登录/注册"
+            lockImg.isUserInteractionEnabled = true
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +49,9 @@ class SelfViewController: UIViewController,GetSignalDelegate {
         lockImg.isUserInteractionEnabled = true
         lockImg.addGestureRecognizer(tapGestureRecognizer)
         
-        
+        if !isLogin {
+            otherMsgContainView.isHidden = true
+        }
     }
 
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
@@ -61,21 +78,45 @@ class SelfViewController: UIViewController,GetSignalDelegate {
         }
     }
     
+    //修改密码，退出登录
     func getSignal(controller: OtherMsgTableViewController, indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
             performSegue(withIdentifier: "segueToResetPassword", sender: nil)
+        case 1:
+            let alertController = UIAlertController(title: nil,
+                                                    message: "确定要退出当前账号吗", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+            let okAction = UIAlertAction(title: "好的", style: .default, handler: {
+                action in
+                isLogin = false
+                self.performSegue(withIdentifier: "segueToLogin", sender: nil)
+            })
+            alertController.addAction(cancelAction)
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
         default:
             break
         }
     }
     
+    //我的资料，我的借款，我的还款
     func getSignalFromSelfTVC(controller: SelfMsgTableViewController, indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            performSegue(withIdentifier: "segueToSelfMsgVC", sender: nil)
+            if isLogin {
+                performSegue(withIdentifier: "segueToSelfMsgVC", sender: nil)
+            } else {
+                performSegue(withIdentifier: "segueToLogin", sender: nil)
+            }
+            
         case 1:
-            performSegue(withIdentifier: "segueToLoanListTVC", sender: nil)
+            if isLogin {
+                performSegue(withIdentifier: "segueToLoanListTVC", sender: nil)
+            } else {
+                performSegue(withIdentifier: "segueToLogin", sender: nil)
+            }
+            
         default:
             break
         }

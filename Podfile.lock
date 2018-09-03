@@ -1,16 +1,64 @@
 PODS:
+  - AFNetworking (2.5.0):
+    - AFNetworking/NSURLConnection (= 2.5.0)
+    - AFNetworking/NSURLSession (= 2.5.0)
+    - AFNetworking/Reachability (= 2.5.0)
+    - AFNetworking/Security (= 2.5.0)
+    - AFNetworking/Serialization (= 2.5.0)
+    - AFNetworking/UIKit (= 2.5.0)
+  - AFNetworking/NSURLConnection (2.5.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.0)
+  - AFNetworking/Security (2.5.0)
+  - AFNetworking/Serialization (2.5.0)
+  - AFNetworking/UIKit (2.5.0):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - Alamofire (4.7.2)
+  - HappyDNS (0.3.14)
+  - JSONKit-NoWarning (1.2)
+  - mob_smssdk (3.2.1):
+    - MOBFoundation
+  - MOBFoundation (3.1.6)
+  - Qiniu (7.2.4):
+    - HappyDNS (~> 0.3)
   - TwicketSegmentedControl (0.1.2)
 
 DEPENDENCIES:
+  - AFNetworking (= 2.5.0)
+  - Alamofire (~> 4.7)
+  - JSONKit-NoWarning (= 1.2)
+  - mob_smssdk
+  - Qiniu (~> 7.1)
   - TwicketSegmentedControl
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - Alamofire
+    - HappyDNS
+    - JSONKit-NoWarning
+    - mob_smssdk
+    - MOBFoundation
+    - Qiniu
     - TwicketSegmentedControl
 
 SPEC CHECKSUMS:
+  AFNetworking: 96ac9bf3eda33582701cb1fcc5b896aa1e20311e
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  HappyDNS: dc6a164ee81979093123c241c6353bcf0218add6
+  JSONKit-NoWarning: 3d27e6f9e6846ecf741e8c64dcadd7d5aa7193cb
+  mob_smssdk: edc462704cc07c6d245eee16c4c09ac4f4d53e61
+  MOBFoundation: a87c5f11fb87f873337189c3ec0add4d3ec6221a
+  Qiniu: 65384bca1cdb0480a68d9b9b8f54db53418c0355
   TwicketSegmentedControl: 6d7a4cf243657e0ac3f00d06d873a25334c04042
 
-PODFILE CHECKSUM: d17cc4743099451050d3aea9559e6466655e5171
+PODFILE CHECKSUM: 58dcb396446ff5e81e04fa333669f78064a65fde
 
 COCOAPODS: 1.5.3

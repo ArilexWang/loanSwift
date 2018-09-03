@@ -8,6 +8,7 @@
 
 import UIKit
 import TwicketSegmentedControl
+import Alamofire
 
 class ViewController: UIViewController {
     
@@ -46,17 +47,34 @@ class ViewController: UIViewController {
         
     }
     
+
+    
     //登录点击事件
     @IBAction func signinBtnClick(_ sender: UIButton) {
         
+//        let account = self.loginByAccount?.accountTextField.text
+//        let password = self.loginByAccount?.passwordTextField.text
         
-        
-
+        let para:Dictionary = [
+            "phone": "13583923827",
+            "password": "12345",
+            "login_manner": "password"
+        ]
+        Alamofire.request("http://212.64.32.162:3099/Loan/login", method: .post, parameters: para, encoding: JSONEncoding.default).responseJSON { (response) in
+            if(response.result.isSuccess) {
+                isLogin = true
+                let dic = response.result.value as? [String: AnyObject]
+                userInfo.id = String(format: "%d", (dic!["id"] as! Int))
+                userInfo.phone = dic!["phone"] as! String
+                self.navigationController?.popViewController(animated: true)
+            } else {
+                print(response.debugDescription)
+            }
+        }
     }
     
     //注册点击事件
     @IBAction func signupBtnClcik(_ sender: UIButton) {
-        
         
         
     }
@@ -68,6 +86,7 @@ class ViewController: UIViewController {
             self.loginByPhoneNumberTVC = segue.destination as? LoginByPhoneNumberTableViewController
         case "loginByAccount":
             self.loginByAccount = segue.destination as? LoginByPasswordTableViewController
+            
         case "segueToSignUp":
             navigationItem.title = ""
         default:
@@ -75,7 +94,8 @@ class ViewController: UIViewController {
         }
     }
     
-
+    
+    
 }
 
 extension ViewController: TwicketSegmentedControlDelegate {

@@ -7,4 +7,9 @@ target 'loan' do
 
   # Pods for loan
   pod 'TwicketSegmentedControl'
+  pod 'Alamofire', '~> 4.7'
+  pod 'Qiniu', '~> 7.1'
+  pod 'JSONKit-NoWarning', '1.2'
+  pod 'AFNetworking', '2.5.0'
+  pod 'mob_smssdk'
 end

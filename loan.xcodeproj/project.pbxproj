@@ -27,6 +27,10 @@
 		8C579890213240EB006AC4D9 /* idback.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C57988E213240EA006AC4D9 /* idback.png */; };
 		8C579891213240EB006AC4D9 /* idfont.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C57988F213240EA006AC4D9 /* idfont.png */; };
 		8C57989321324664006AC4D9 /* idhold.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C57989221324664006AC4D9 /* idhold.png */; };
+		8C94F408213A37F700384500 /* Globle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C94F407213A37F700384500 /* Globle.swift */; };
+		8C94F40C213A4F2100384500 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C94F40B213A4F2100384500 /* User.swift */; };
+		8C94F40E213A5F9E00384500 /* MonthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C94F40D213A5F9E00384500 /* MonthCollectionViewCell.swift */; };
+		8C94F410213A739400384500 /* LoanMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C94F40F213A739400384500 /* LoanMsg.swift */; };
 		8C9770A32137992800D1E8BA /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9770A22137992800D1E8BA /* ResetPasswordViewController.swift */; };
 		8C9770A52137C4EC00D1E8BA /* SelfMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9770A42137C4EC00D1E8BA /* SelfMessageViewController.swift */; };
 		8C9770A72137CA1500D1E8BA /* SelfDetailMessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9770A62137CA1500D1E8BA /* SelfDetailMessageTableViewController.swift */; };
@@ -64,6 +68,7 @@
 		8CB6B14F21300A33007CF2D3 /* msgcard.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB6B14C21300A33007CF2D3 /* msgcard.png */; };
 		8CB6B15021300A33007CF2D3 /* bankcard.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB6B14D21300A33007CF2D3 /* bankcard.png */; };
 		8CB6B15221300E36007CF2D3 /* morecard.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB6B15121300E36007CF2D3 /* morecard.png */; };
+		8CEA650B213BC3C200AA69E5 /* IDMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEA650A213BC3C200AA69E5 /* IDMessageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +94,10 @@
 		8C57988E213240EA006AC4D9 /* idback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = idback.png; sourceTree = "<group>"; };
 		8C57988F213240EA006AC4D9 /* idfont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = idfont.png; sourceTree = "<group>"; };
 		8C57989221324664006AC4D9 /* idhold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = idhold.png; sourceTree = "<group>"; };
+		8C94F407213A37F700384500 /* Globle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globle.swift; sourceTree = "<group>"; };
+		8C94F40B213A4F2100384500 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8C94F40D213A5F9E00384500 /* MonthCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCollectionViewCell.swift; sourceTree = "<group>"; };
+		8C94F40F213A739400384500 /* LoanMsg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanMsg.swift; sourceTree = "<group>"; };
 		8C9770A22137992800D1E8BA /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		8C9770A42137C4EC00D1E8BA /* SelfMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfMessageViewController.swift; sourceTree = "<group>"; };
 		8C9770A62137CA1500D1E8BA /* SelfDetailMessageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfDetailMessageTableViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +137,7 @@
 		8CB6B14C21300A33007CF2D3 /* msgcard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = msgcard.png; sourceTree = "<group>"; };
 		8CB6B14D21300A33007CF2D3 /* bankcard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bankcard.png; sourceTree = "<group>"; };
 		8CB6B15121300E36007CF2D3 /* morecard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = morecard.png; sourceTree = "<group>"; };
+		8CEA650A213BC3C200AA69E5 /* IDMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDMessageViewController.swift; sourceTree = "<group>"; };
 		8D98671DB4AB63A8443FE496 /* Pods-loan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-loan/Pods-loan.debug.xcconfig"; sourceTree = "<group>"; };
 		CD5DABA95AC1C5C6CE5FBF14 /* Pods-loan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loan.release.xcconfig"; path = "Pods/Target Support Files/Pods-loan/Pods-loan.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +168,7 @@
 			children = (
 				8C49E7052135205A0047D17A /* DesignableSlider.swift */,
 				8C9770B42138251A00D1E8BA /* MainViewController.swift */,
+				8C94F40D213A5F9E00384500 /* MonthCollectionViewCell.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -200,6 +211,7 @@
 				8C9770B2213820A600D1E8BA /* LoanListViewController.swift */,
 				8C9770B62138264900D1E8BA /* LoanConfirmViewController.swift */,
 				8C9770B821383B8000D1E8BA /* LoanDetailViewController.swift */,
+				8C94F40F213A739400384500 /* LoanMsg.swift */,
 			);
 			path = Loan;
 			sourceTree = "<group>";
@@ -225,6 +237,7 @@
 		8CB6B102212D9348007CF2D3 /* loan */ = {
 			isa = PBXGroup;
 			children = (
+				8CEA6509213BC2E900AA69E5 /* DetailMessage */,
 				8C9770B12138208F00D1E8BA /* Loan */,
 				8C49E71A2136743A0047D17A /* Self */,
 				8C49E71521353C7B0047D17A /* Thirdpart */,
@@ -237,6 +250,8 @@
 				8CB6B10A212D9349007CF2D3 /* Assets.xcassets */,
 				8CB6B10C212D9349007CF2D3 /* LaunchScreen.storyboard */,
 				8CB6B10F212D9349007CF2D3 /* Info.plist */,
+				8C94F407213A37F700384500 /* Globle.swift */,
+				8C94F40B213A4F2100384500 /* User.swift */,
 			);
 			path = loan;
 			sourceTree = "<group>";
@@ -331,6 +346,14 @@
 				8CB6B14C21300A33007CF2D3 /* msgcard.png */,
 			);
 			path = Information;
+			sourceTree = "<group>";
+		};
+		8CEA6509213BC2E900AA69E5 /* DetailMessage */ = {
+			isa = PBXGroup;
+			children = (
+				8CEA650A213BC3C200AA69E5 /* IDMessageViewController.swift */,
+			);
+			path = DetailMessage;
 			sourceTree = "<group>";
 		};
 		BFFB3EF314B1CAC1BC90E855 /* Frameworks */ = {
@@ -469,10 +492,20 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-loan/Pods-loan-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/HappyDNS/HappyDNS.framework",
+				"${BUILT_PRODUCTS_DIR}/JSONKit-NoWarning/JSONKit_NoWarning.framework",
+				"${BUILT_PRODUCTS_DIR}/Qiniu/Qiniu.framework",
 				"${BUILT_PRODUCTS_DIR}/TwicketSegmentedControl/TwicketSegmentedControl.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HappyDNS.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONKit_NoWarning.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Qiniu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwicketSegmentedControl.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,14 +521,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C9770A52137C4EC00D1E8BA /* SelfMessageViewController.swift in Sources */,
+				8C94F410213A739400384500 /* LoanMsg.swift in Sources */,
 				8C9770A92137CA8500D1E8BA /* SelfDetailMessageViewController.swift in Sources */,
+				8C94F408213A37F700384500 /* Globle.swift in Sources */,
 				8CB6B121212D9FE4007CF2D3 /* LoginByPhoneNumberTableViewController.swift in Sources */,
 				8CB6B12A212EDC1E007CF2D3 /* SignUpTableViewController.swift in Sources */,
 				8C49E7202136D51E0047D17A /* SelfMsgTableViewController.swift in Sources */,
+				8CEA650B213BC3C200AA69E5 /* IDMessageViewController.swift in Sources */,
 				8C49E71E2136D2DD0047D17A /* ResetPasswordTableViewController.swift in Sources */,
 				8C9770B3213820A600D1E8BA /* LoanListViewController.swift in Sources */,
 				8C49E7222136D52B0047D17A /* OtherMsgTableViewController.swift in Sources */,
+				8C94F40E213A5F9E00384500 /* MonthCollectionViewCell.swift in Sources */,
 				8CB6B125212ED6DD007CF2D3 /* LoginByPasswordTableViewController.swift in Sources */,
+				8C94F40C213A4F2100384500 /* User.swift in Sources */,
 				8CB6B106212D9348007CF2D3 /* ViewController.swift in Sources */,
 				8C49E71C213674910047D17A /* SelfViewController.swift in Sources */,
 				8CB6B104212D9348007CF2D3 /* AppDelegate.swift in Sources */,

@@ -143,9 +143,19 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/HappyDNS/HappyDNS.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JSONKit-NoWarning/JSONKit_NoWarning.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Qiniu/Qiniu.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TwicketSegmentedControl/TwicketSegmentedControl.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/HappyDNS/HappyDNS.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JSONKit-NoWarning/JSONKit_NoWarning.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Qiniu/Qiniu.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TwicketSegmentedControl/TwicketSegmentedControl.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
