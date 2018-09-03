@@ -33,7 +33,6 @@ class SelfMaterialMessageTableViewController: UITableViewController,ActionSheetC
     }
     
     func loadFirstData(){
-        
         if let filepath = Bundle.main.path(forResource: "address", ofType: "json") {
             do {
                 let jsonStr = try String(contentsOfFile: filepath)
