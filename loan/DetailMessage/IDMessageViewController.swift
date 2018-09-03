@@ -88,8 +88,22 @@ class IDMessageViewController: UIViewController,UINavigationControllerDelegate ,
         }, option: nil)
         
     }
+    
+    var idMessageTVC: IDMessageTableViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "embedToOwner":
+            self.idMessageTVC = segue.destination as? IDMessageTableViewController
+        default:
+            break
+        }
+    }
+    
 }

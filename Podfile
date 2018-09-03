@@ -12,4 +12,5 @@ target 'loan' do
   pod 'JSONKit-NoWarning', '1.2'
   pod 'AFNetworking', '2.5.0'
   pod 'mob_smssdk'
+  pod 'ActionSheetPicker-3.0'
 end

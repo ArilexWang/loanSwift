@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eb4-BQ-r4Y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hqg-GY-ml3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -484,10 +484,10 @@
             </objects>
             <point key="canvasLocation" x="3548" y="828"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Message Table View Controller-->
         <scene sceneID="II4-aE-rhP">
             <objects>
-                <tableViewController id="uF2-WS-8Hg" sceneMemberID="viewController">
+                <tableViewController id="uF2-WS-8Hg" customClass="IDMessageTableViewController" customModule="loan" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mej-1D-Fsj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -562,6 +562,10 @@
                             <outlet property="delegate" destination="uF2-WS-8Hg" id="iHB-Wr-zaR"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="idNumTF" destination="77C-xe-G4o" id="aRZ-qU-K6J"/>
+                        <outlet property="nameTF" destination="bk5-zv-9o0" id="z3Q-sD-bvu"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ioL-Ee-raq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -595,7 +599,7 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="glf-wf-4gG"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="uF2-WS-8Hg" kind="embed" id="QH2-4g-Rlo"/>
+                                            <segue destination="uF2-WS-8Hg" kind="embed" identifier="embedToOwner" id="QH2-4g-Rlo"/>
                                         </connections>
                                     </containerView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IGf-CH-18j">
@@ -2019,7 +2023,7 @@
                                     <constraint firstAttribute="height" constant="318" id="hCG-eI-PcN"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="IaC-gG-CFT" kind="embed" id="B0S-7T-aCW"/>
+                                    <segue destination="IaC-gG-CFT" kind="embed" identifier="embedSignupTVC" id="B0S-7T-aCW"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nce-Jv-cdZ">
@@ -2032,6 +2036,9 @@
                                 <state key="normal" title="注册">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitBtnClick:" destination="eb4-BQ-r4Y" eventType="touchUpInside" id="TTi-Ww-ISR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2797,7 +2804,7 @@
         <!--收款银行卡-->
         <scene sceneID="L3e-4N-pMJ">
             <objects>
-                <viewController title="收款银行卡" id="Hqg-GY-ml3" sceneMemberID="viewController">
+                <viewController title="收款银行卡" id="Hqg-GY-ml3" customClass="CreditCardViewController" customModule="loan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="den-7P-AAI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2808,7 +2815,7 @@
                                     <constraint firstAttribute="height" constant="120" id="ffC-8O-O1W"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="HZI-F9-f21" kind="embed" id="IlX-9D-z9l"/>
+                                    <segue destination="HZI-F9-f21" kind="embed" identifier="embedOwnerMsgTVC" id="IlX-9D-z9l"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3C-6P-WFq">
@@ -2817,7 +2824,7 @@
                                     <constraint firstAttribute="height" constant="120" id="wC6-Uw-gmC"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="0Ks-5n-c3q" kind="embed" id="vNE-Gl-cGZ"/>
+                                    <segue destination="0Ks-5n-c3q" kind="embed" identifier="embedBankTVC" id="vNE-Gl-cGZ"/>
                                 </connections>
                             </containerView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="zXT-Wv-439">
@@ -2848,6 +2855,9 @@
                                 <state key="normal" title="提交">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitBtnClick:" destination="Hqg-GY-ml3" eventType="touchUpInside" id="kVO-fx-MSO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2870,10 +2880,10 @@
             </objects>
             <point key="canvasLocation" x="3548" y="1516"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Credit Card Owner Msg Table View Controller-->
         <scene sceneID="DSK-9r-yft">
             <objects>
-                <tableViewController id="HZI-F9-f21" sceneMemberID="viewController">
+                <tableViewController id="HZI-F9-f21" customClass="CreditCardOwnerMsgTableViewController" customModule="loan" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Cps-7K-uFw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2894,10 +2904,21 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入持卡人姓名" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MsY-UK-4re">
+                                                    <rect key="frame" x="178" y="22" width="181" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="181" id="hK9-lb-vDU"/>
+                                                    </constraints>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="MsY-UK-4re" firstAttribute="centerY" secondItem="Czd-wJ-yu7" secondAttribute="centerY" id="2jh-Xo-1PG"/>
                                                 <constraint firstItem="eWs-2H-IpF" firstAttribute="leading" secondItem="Czd-wJ-yu7" secondAttribute="leadingMargin" id="Ox1-Vh-dvo"/>
                                                 <constraint firstItem="eWs-2H-IpF" firstAttribute="centerY" secondItem="Czd-wJ-yu7" secondAttribute="centerY" id="icu-sj-xb6"/>
+                                                <constraint firstItem="MsY-UK-4re" firstAttribute="trailing" secondItem="Czd-wJ-yu7" secondAttribute="trailingMargin" id="yoe-Sk-1yl"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -2914,9 +2935,20 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入持卡人身份证号" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lJ8-KQ-JSX">
+                                                    <rect key="frame" x="178" y="21" width="181" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="181" id="FER-DX-qiq"/>
+                                                    </constraints>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="lJ8-KQ-JSX" firstAttribute="centerY" secondItem="cMN-p6-VsR" secondAttribute="centerY" id="A4o-yI-Pbd"/>
                                                 <constraint firstItem="wnm-aT-oL7" firstAttribute="leading" secondItem="cMN-p6-VsR" secondAttribute="leadingMargin" id="Wzz-EJ-JTg"/>
+                                                <constraint firstItem="lJ8-KQ-JSX" firstAttribute="trailing" secondItem="cMN-p6-VsR" secondAttribute="trailingMargin" id="qrC-xy-W6H"/>
                                                 <constraint firstItem="wnm-aT-oL7" firstAttribute="centerY" secondItem="cMN-p6-VsR" secondAttribute="centerY" id="qyY-xg-tIP"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -2929,6 +2961,10 @@
                             <outlet property="delegate" destination="HZI-F9-f21" id="LAr-Ls-wN2"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="creditCardOwnerIDTF" destination="lJ8-KQ-JSX" id="ahJ-wh-fVj"/>
+                        <outlet property="creditCardOwnerTF" destination="MsY-UK-4re" id="qiH-zZ-pdU"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dP3-ss-WgB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3051,10 +3087,10 @@
             </objects>
             <point key="canvasLocation" x="5369" y="1231"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Credit Card Msg Table View Controller-->
         <scene sceneID="2W8-Tz-Gbi">
             <objects>
-                <tableViewController id="0Ks-5n-c3q" sceneMemberID="viewController">
+                <tableViewController id="0Ks-5n-c3q" customClass="CreditCardMsgTableViewController" customModule="loan" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="EmH-Vw-jAK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3075,10 +3111,24 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zO8-qj-QvC">
+                                                    <rect key="frame" x="239" y="15" width="120" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="gZz-TR-r4t"/>
+                                                    </constraints>
+                                                    <state key="normal" title="工商银行">
+                                                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="bankBtnClick:" destination="0Ks-5n-c3q" eventType="touchUpInside" id="jNt-oY-o6K"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="zO8-qj-QvC" firstAttribute="centerY" secondItem="GSa-SY-COY" secondAttribute="centerY" id="4Ht-q8-l7c"/>
                                                 <constraint firstItem="OcD-gw-ROK" firstAttribute="leading" secondItem="GSa-SY-COY" secondAttribute="leadingMargin" id="832-sD-aoI"/>
                                                 <constraint firstItem="OcD-gw-ROK" firstAttribute="centerY" secondItem="GSa-SY-COY" secondAttribute="centerY" id="XHW-f7-sGI"/>
+                                                <constraint firstItem="zO8-qj-QvC" firstAttribute="trailing" secondItem="GSa-SY-COY" secondAttribute="trailingMargin" id="fy2-xs-JHd"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -3096,12 +3146,12 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入银行卡卡号" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QIY-7X-gbR">
-                                                    <rect key="frame" x="178" y="21.5" width="181" height="17"/>
+                                                    <rect key="frame" x="178" y="21" width="181" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="181" id="nuV-LM-Dy5"/>
                                                     </constraints>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
@@ -3121,10 +3171,13 @@
                             <outlet property="delegate" destination="0Ks-5n-c3q" id="DJP-6S-kEJ"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="creditCardIDTF" destination="QIY-7X-gbR" id="yYt-xo-aDg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nao-DZ-sj8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4393" y="1629"/>
+            <point key="canvasLocation" x="4392.8000000000002" y="1628.1859070464768"/>
         </scene>
         <!--Other Msg Table View Controller-->
         <scene sceneID="89l-Et-Jea">

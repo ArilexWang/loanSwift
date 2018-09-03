@@ -1,4 +1,5 @@
 PODS:
+  - ActionSheetPicker-3.0 (2.3.0)
   - AFNetworking (2.5.0):
     - AFNetworking/NSURLConnection (= 2.5.0)
     - AFNetworking/NSURLSession (= 2.5.0)
@@ -31,6 +32,7 @@ PODS:
   - TwicketSegmentedControl (0.1.2)
 
 DEPENDENCIES:
+  - ActionSheetPicker-3.0
   - AFNetworking (= 2.5.0)
   - Alamofire (~> 4.7)
   - JSONKit-NoWarning (= 1.2)
@@ -40,6 +42,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - ActionSheetPicker-3.0
     - AFNetworking
     - Alamofire
     - HappyDNS
@@ -50,6 +53,7 @@ SPEC REPOS:
     - TwicketSegmentedControl
 
 SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: eef157d75e151f255c5333d26656c7fbfe905a51
   AFNetworking: 96ac9bf3eda33582701cb1fcc5b896aa1e20311e
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   HappyDNS: dc6a164ee81979093123c241c6353bcf0218add6
@@ -59,6 +63,6 @@ SPEC CHECKSUMS:
   Qiniu: 65384bca1cdb0480a68d9b9b8f54db53418c0355
   TwicketSegmentedControl: 6d7a4cf243657e0ac3f00d06d873a25334c04042
 
-PODFILE CHECKSUM: 58dcb396446ff5e81e04fa333669f78064a65fde
+PODFILE CHECKSUM: 3bb59ff9daad5856d630efda50122a772d117695
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.1

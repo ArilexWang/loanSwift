@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		293BE448213D0B0D00F49C1C /* CreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293BE447213D0B0D00F49C1C /* CreditCardViewController.swift */; };
+		293BE44A213D0BCA00F49C1C /* CreditCardOwnerMsgTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293BE449213D0BCA00F49C1C /* CreditCardOwnerMsgTableViewController.swift */; };
+		293BE44C213D0BF700F49C1C /* CreditCardMsgTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293BE44B213D0BF700F49C1C /* CreditCardMsgTableViewController.swift */; };
+		293BE450213D150B00F49C1C /* IDMessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293BE44F213D150B00F49C1C /* IDMessageTableViewController.swift */; };
 		6E6563DA5066F147D9E65925 /* Pods_loan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F1A7E1AD53F3B28347B01D /* Pods_loan.framework */; };
 		8C49E7002134F89B0047D17A /* resetPassword.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C49E6FE2134F89A0047D17A /* resetPassword.png */; };
 		8C49E7012134F89B0047D17A /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C49E6FF2134F89A0047D17A /* logout.png */; };
@@ -36,7 +40,6 @@
 		8C9770A72137CA1500D1E8BA /* SelfDetailMessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9770A62137CA1500D1E8BA /* SelfDetailMessageTableViewController.swift */; };
 		8C9770A92137CA8500D1E8BA /* SelfDetailMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9770A82137CA8500D1E8BA /* SelfDetailMessageViewController.swift */; };
 		8C9770AE21381B8300D1E8BA /* clickTo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C9770AC21381B8300D1E8BA /* clickTo.png */; };
-		8C9770B021381CB400D1E8BA /* loanBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C9770AF21381CB400D1E8BA /* loanBtn.png */; };
 		8C9770B3213820A600D1E8BA /* LoanListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9770B2213820A600D1E8BA /* LoanListViewController.swift */; };
 		8C9770B52138251A00D1E8BA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9770B42138251A00D1E8BA /* MainViewController.swift */; };
 		8C9770B72138264900D1E8BA /* LoanConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9770B62138264900D1E8BA /* LoanConfirmViewController.swift */; };
@@ -72,6 +75,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		293BE447213D0B0D00F49C1C /* CreditCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardViewController.swift; sourceTree = "<group>"; };
+		293BE449213D0BCA00F49C1C /* CreditCardOwnerMsgTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardOwnerMsgTableViewController.swift; sourceTree = "<group>"; };
+		293BE44B213D0BF700F49C1C /* CreditCardMsgTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardMsgTableViewController.swift; sourceTree = "<group>"; };
+		293BE44F213D150B00F49C1C /* IDMessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDMessageTableViewController.swift; sourceTree = "<group>"; };
 		88F1A7E1AD53F3B28347B01D /* Pods_loan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_loan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C49E6FE2134F89A0047D17A /* resetPassword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resetPassword.png; sourceTree = "<group>"; };
 		8C49E6FF2134F89A0047D17A /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
@@ -103,7 +110,6 @@
 		8C9770A62137CA1500D1E8BA /* SelfDetailMessageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfDetailMessageTableViewController.swift; sourceTree = "<group>"; };
 		8C9770A82137CA8500D1E8BA /* SelfDetailMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfDetailMessageViewController.swift; sourceTree = "<group>"; };
 		8C9770AC21381B8300D1E8BA /* clickTo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clickTo.png; sourceTree = "<group>"; };
-		8C9770AF21381CB400D1E8BA /* loanBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = loanBtn.png; path = ../../../../../Desktop/loanBtn.png; sourceTree = "<group>"; };
 		8C9770B2213820A600D1E8BA /* LoanListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanListViewController.swift; sourceTree = "<group>"; };
 		8C9770B42138251A00D1E8BA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8C9770B62138264900D1E8BA /* LoanConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanConfirmViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +160,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		293BE446213D0ADE00F49C1C /* CreditCard */ = {
+			isa = PBXGroup;
+			children = (
+				293BE447213D0B0D00F49C1C /* CreditCardViewController.swift */,
+				293BE449213D0BCA00F49C1C /* CreditCardOwnerMsgTableViewController.swift */,
+				293BE44B213D0BF700F49C1C /* CreditCardMsgTableViewController.swift */,
+			);
+			path = CreditCard;
+			sourceTree = "<group>";
+		};
 		655FA2027981FB17AC058176 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,7 +215,6 @@
 		8C9770AA21381B6F00D1E8BA /* loan */ = {
 			isa = PBXGroup;
 			children = (
-				8C9770AF21381CB400D1E8BA /* loanBtn.png */,
 				8C9770AC21381B8300D1E8BA /* clickTo.png */,
 			);
 			path = loan;
@@ -237,6 +252,7 @@
 		8CB6B102212D9348007CF2D3 /* loan */ = {
 			isa = PBXGroup;
 			children = (
+				293BE446213D0ADE00F49C1C /* CreditCard */,
 				8CEA6509213BC2E900AA69E5 /* DetailMessage */,
 				8C9770B12138208F00D1E8BA /* Loan */,
 				8C49E71A2136743A0047D17A /* Self */,
@@ -351,6 +367,7 @@
 		8CEA6509213BC2E900AA69E5 /* DetailMessage */ = {
 			isa = PBXGroup;
 			children = (
+				293BE44F213D150B00F49C1C /* IDMessageTableViewController.swift */,
 				8CEA650A213BC3C200AA69E5 /* IDMessageViewController.swift */,
 			);
 			path = DetailMessage;
@@ -449,7 +466,6 @@
 				8CB6B15021300A33007CF2D3 /* bankcard.png in Resources */,
 				8C49E714213534060047D17A /* apply.png in Resources */,
 				8CB6B14F21300A33007CF2D3 /* msgcard.png in Resources */,
-				8C9770B021381CB400D1E8BA /* loanBtn.png in Resources */,
 				8CB6B10B212D9349007CF2D3 /* Assets.xcassets in Resources */,
 				8CB6B146212EF513007CF2D3 /* paybackImg.png in Resources */,
 				8C579891213240EB006AC4D9 /* idfont.png in Resources */,
@@ -491,8 +507,9 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-loan/Pods-loan-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-loan/Pods-loan-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/HappyDNS/HappyDNS.framework",
 				"${BUILT_PRODUCTS_DIR}/JSONKit-NoWarning/JSONKit_NoWarning.framework",
@@ -502,6 +519,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionSheetPicker_3_0.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HappyDNS.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONKit_NoWarning.framework",
@@ -510,7 +528,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-loan/Pods-loan-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-loan/Pods-loan-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -520,7 +538,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				293BE44C213D0BF700F49C1C /* CreditCardMsgTableViewController.swift in Sources */,
 				8C9770A52137C4EC00D1E8BA /* SelfMessageViewController.swift in Sources */,
+				293BE448213D0B0D00F49C1C /* CreditCardViewController.swift in Sources */,
 				8C94F410213A739400384500 /* LoanMsg.swift in Sources */,
 				8C9770A92137CA8500D1E8BA /* SelfDetailMessageViewController.swift in Sources */,
 				8C94F408213A37F700384500 /* Globle.swift in Sources */,
@@ -539,12 +559,14 @@
 				8CB6B104212D9348007CF2D3 /* AppDelegate.swift in Sources */,
 				8C9770A32137992800D1E8BA /* ResetPasswordViewController.swift in Sources */,
 				8C49E7062135205A0047D17A /* DesignableSlider.swift in Sources */,
+				293BE450213D150B00F49C1C /* IDMessageTableViewController.swift in Sources */,
 				8CB6B128212EDB49007CF2D3 /* SignUpViewController.swift in Sources */,
 				8C9770B72138264900D1E8BA /* LoanConfirmViewController.swift in Sources */,
 				8C9770B52138251A00D1E8BA /* MainViewController.swift in Sources */,
 				8C9770B921383B8000D1E8BA /* LoanDetailViewController.swift in Sources */,
 				8C49E71921353CA80047D17A /* NNValidationView.m in Sources */,
 				8C9770A72137CA1500D1E8BA /* SelfDetailMessageTableViewController.swift in Sources */,
+				293BE44A213D0BCA00F49C1C /* CreditCardOwnerMsgTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
