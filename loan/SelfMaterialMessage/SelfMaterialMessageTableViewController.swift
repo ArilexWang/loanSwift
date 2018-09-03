@@ -14,16 +14,19 @@ import MJExtension
 class SelfMaterialMessageTableViewController: UITableViewController,ActionSheetCustomPickerDelegate {
     
     var picker: ActionSheetCustomPicker?
+    
+    var homePicker: ActionSheetCustomPicker?
 
     var index1:Int = 0  //省下标
     var index2:Int = 0  //市下标
     var index3:Int = 0  //区下标
     
+    var addressArr: [Dictionary<String,Array<Dictionary<String,Array<String>>>>]?
     var provinceArr = [String]()
     var districtArr = [String]()
-    var addressArr: [Dictionary<String,Array<Dictionary<String,Array<String>>>>]?
     var cityArr =  [String]()
     
+    @IBOutlet weak var homeDistrictBtn: UIButton!
     @IBOutlet weak var districtBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +45,6 @@ class SelfMaterialMessageTableViewController: UITableViewController,ActionSheetC
                 for item in self.addressArr!{
                     let name = (item as! Dictionary<String,Any>).keys.first
                     firstNames.append(name!)
-                    
                 }
                 self.provinceArr = firstNames
             } catch {
@@ -65,6 +67,9 @@ class SelfMaterialMessageTableViewController: UITableViewController,ActionSheetC
         self.districtArr = ((((self.addressArr![self.index1].values.first)?[self.index2])?.values)?.first)!
     }
     
+    
+    
+    
     @IBAction func companyDistinctBtnClick(_ sender: UIButton) {
         self.picker = ActionSheetCustomPicker.init(title: "选择地区", delegate: self, showCancelButton: true, origin: self.view, initialSelections: [self.index1,self.index2,self.index3])
         self.picker?.tapDismissAction = TapAction.success
@@ -74,6 +79,19 @@ class SelfMaterialMessageTableViewController: UITableViewController,ActionSheetC
         self.picker?.setCancelButton(cusCancelBtn)
         self.picker?.setDoneButton(cusDoneBtn)
         self.picker?.show()
+    }
+    
+    
+    @IBAction func homeDistinctBtnClick(_ sender: UIButton) {
+        self.homePicker = ActionSheetCustomPicker.init(title: "选择地区", delegate: self, showCancelButton: true, origin: self.view, initialSelections: [self.index1,self.index2,self.index3])
+        self.homePicker?.tapDismissAction = TapAction.success
+        
+        let cusCancelBtn = UIBarButtonItem(title: "取消", style: UIBarButtonItemStyle.plain, target: self, action: nil)
+        let cusDoneBtn = UIBarButtonItem(title: "确定", style: UIBarButtonItemStyle.plain, target: self, action: nil)
+        self.homePicker?.setCancelButton(cusCancelBtn)
+        self.homePicker?.setDoneButton(cusDoneBtn)
+        self.homePicker?.show()
+        
         
     }
     
@@ -167,8 +185,16 @@ class SelfMaterialMessageTableViewController: UITableViewController,ActionSheetC
         if self.index3 < self.districtArr.count {
             detailAddress += self.districtArr[self.index3]
         }
-        districtBtn.setTitle(detailAddress, for: .normal)
-        districtBtn.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
+        
+        if actionSheetPicker == self.picker{
+            districtBtn.setTitle(detailAddress, for: .normal)
+            districtBtn.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
+        } else {
+            homeDistrictBtn.setTitle(detailAddress, for: .normal)
+            homeDistrictBtn.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
+        }
+        
+        
     }
     
     

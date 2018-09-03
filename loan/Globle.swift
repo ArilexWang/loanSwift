@@ -45,3 +45,11 @@ func createQiniuToken(fileName: String) -> String {
     
     return kQiniuAccessKey + ":" + encodedSign! + ":" + encodedPutPolicy!
 }
+
+
+let HOST = "http://212.64.32.162:3099/Loan/"
+
+let LoginURL = "http://212.64.32.162:3099/Loan/login"
+
+let RegisterURL = "http://212.64.32.162:3099/Loan/register"
+

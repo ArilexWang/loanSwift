@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class SignUpViewController: UIViewController {
 
@@ -21,13 +22,27 @@ class SignUpViewController: UIViewController {
 
     @IBAction func submitBtnClick(_ sender: UIButton) {
         let code = signupTVC?.codeTF.text
-        let tele = "17717231435"
+        let tele = signupTVC?.phoneNumberTF.text
+        let referrer_id = signupTVC?.referrerIDTF.text
+        let password = signupTVC?.passwordTF.text
+        let verify_code = "0"
         
         //发送验证码
         SMSSDK.commitVerificationCode(code, phoneNumber: tele, zone: "86") { (error) in
             //验证成功
             if (error.debugDescription == "nil"){
-                
+                let para:Dictionary = ["phone": tele,
+                            "password":password,
+                            "verify_code": verify_code,
+                            "referrer_id": referrer_id]
+                //发送注册请求
+                Alamofire.request(RegisterURL, method: .post, parameters: para, encoding: JSONEncoding.default).responseJSON { (response) in
+                    if(response.result.isSuccess) {
+                        print(response.result.value)
+                    } else {
+                        print(response.debugDescription)
+                    }
+                }
             } else {  //失败
                 let alertController = UIAlertController(title: nil,
                                                         message: "验证码输入错误", preferredStyle: .alert)

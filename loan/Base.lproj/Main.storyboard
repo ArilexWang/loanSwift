@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pou-k9-C8r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eb4-BQ-r4Y">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1204,7 +1204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NzQ-Bc-J5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="918" y="1948"/>
+            <point key="canvasLocation" x="918" y="1798"/>
         </scene>
         <!--我的借款-->
         <scene sceneID="fI2-7j-Y7F">
@@ -1387,7 +1387,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B6m-S6-UYi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="124" y="1948"/>
+            <point key="canvasLocation" x="124" y="1798"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="Fyw-i3-bl3">
@@ -2634,17 +2634,23 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择省市区" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1d-3B-yZL">
-                                                    <rect key="frame" x="255" y="19" width="104" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.80392156859999997" green="0.80392156859999997" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dK7-hh-Jgy">
+                                                    <rect key="frame" x="181" y="15" width="178" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="178" id="3QE-bF-WVm"/>
+                                                    </constraints>
+                                                    <state key="normal" title="请选择省市区">
+                                                        <color key="titleColor" red="0.78039215689999997" green="0.78039215689999997" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="homeDistinctBtnClick:" destination="cF6-yL-FPd" eventType="touchUpInside" id="Vhm-NK-1mM"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="a1d-3B-yZL" firstAttribute="centerY" secondItem="xjX-SL-DT4" secondAttribute="centerY" id="K05-vf-unP"/>
-                                                <constraint firstItem="a1d-3B-yZL" firstAttribute="trailing" secondItem="xjX-SL-DT4" secondAttribute="trailingMargin" id="cra-kW-GTs"/>
+                                                <constraint firstItem="dK7-hh-Jgy" firstAttribute="centerY" secondItem="xjX-SL-DT4" secondAttribute="centerY" id="ZKX-dh-yOv"/>
                                                 <constraint firstItem="rLg-Sy-FDY" firstAttribute="centerY" secondItem="xjX-SL-DT4" secondAttribute="centerY" id="kg1-zB-362"/>
+                                                <constraint firstItem="dK7-hh-Jgy" firstAttribute="trailing" secondItem="xjX-SL-DT4" secondAttribute="trailingMargin" id="oN5-9V-vNI"/>
                                                 <constraint firstItem="rLg-Sy-FDY" firstAttribute="leading" secondItem="xjX-SL-DT4" secondAttribute="leadingMargin" id="wP0-pw-iAs"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -2687,6 +2693,7 @@
                     </tableView>
                     <connections>
                         <outlet property="districtBtn" destination="gO3-r6-yId" id="jT9-Qy-K5P"/>
+                        <outlet property="homeDistrictBtn" destination="dK7-hh-Jgy" id="EoT-EZ-cCI"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P3g-VL-rFi" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -60,7 +60,7 @@ class ViewController: UIViewController {
             "password": "12345",
             "login_manner": "password"
         ]
-        Alamofire.request("http://212.64.32.162:3099/Loan/login", method: .post, parameters: para, encoding: JSONEncoding.default).responseJSON { (response) in
+        Alamofire.request(LoginURL, method: .post, parameters: para, encoding: JSONEncoding.default).responseJSON { (response) in
             if(response.result.isSuccess) {
                 isLogin = true
                 let dic = response.result.value as? [String: AnyObject]
