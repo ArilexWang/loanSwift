@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hqg-GY-ml3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pou-k9-C8r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -2266,7 +2266,7 @@
         <!--资料信息-->
         <scene sceneID="y0r-Ns-3GK">
             <objects>
-                <viewController title="资料信息" id="Pou-k9-C8r" sceneMemberID="viewController">
+                <viewController title="资料信息" id="Pou-k9-C8r" customClass="SelfMaterialViewController" customModule="loan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ac5-PC-zB1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2290,7 +2290,7 @@
                                             <constraint firstAttribute="height" constant="540" id="5RE-cs-7mu"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="cF6-yL-FPd" kind="embed" id="aLa-xX-fHQ"/>
+                                            <segue destination="cF6-yL-FPd" kind="embed" identifier="embedMaterialMsgTVC" id="aLa-xX-fHQ"/>
                                         </connections>
                                     </containerView>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="F7L-4l-mUe">
@@ -2315,7 +2315,7 @@
                                             <constraint firstAttribute="height" constant="180" id="ySl-Fz-vZE"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="R0V-Qr-eo5" kind="embed" id="p9z-Lb-wyR"/>
+                                            <segue destination="R0V-Qr-eo5" kind="embed" identifier="embedImmediateFamilyTVC" id="p9z-Lb-wyR"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DXw-zs-VEE">
@@ -2324,7 +2324,7 @@
                                             <constraint firstAttribute="height" constant="180" id="5Am-l7-Fdm"/>
                                         </constraints>
                                         <connections>
-                                            <segue destination="xw8-68-bZ3" kind="embed" id="oOI-XT-8w5"/>
+                                            <segue destination="xw8-68-bZ3" kind="embed" identifier="embedNeighborRelativeTVC" id="oOI-XT-8w5"/>
                                         </connections>
                                     </containerView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbH-62-nL4">
@@ -2381,10 +2381,10 @@
             </objects>
             <point key="canvasLocation" x="4393" y="735"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Self Material Message Table View Controller-->
         <scene sceneID="Nho-c6-G1M">
             <objects>
-                <tableViewController id="cF6-yL-FPd" sceneMemberID="viewController">
+                <tableViewController id="cF6-yL-FPd" customClass="SelfMaterialMessageTableViewController" customModule="loan" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="DjO-XG-7Kf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="540"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2536,18 +2536,24 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择省市区" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZp-8y-NaC">
-                                                    <rect key="frame" x="255" y="19.5" width="104" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.80392156862745101" green="0.80392156862745101" blue="0.82352941176470584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gO3-r6-yId">
+                                                    <rect key="frame" x="181" y="14" width="178" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="178" id="RkG-lD-zIS"/>
+                                                    </constraints>
+                                                    <state key="normal" title="请选择省市区">
+                                                        <color key="titleColor" red="0.7803921568627451" green="0.7803921568627451" blue="0.80392156862745101" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="companyDistinctBtnClick:" destination="cF6-yL-FPd" eventType="touchUpInside" id="Lze-pW-F6E"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="8qX-zn-LaU" firstAttribute="leading" secondItem="tRT-xE-1C7" secondAttribute="leadingMargin" id="1CO-rk-qn5"/>
-                                                <constraint firstItem="DZp-8y-NaC" firstAttribute="trailing" secondItem="tRT-xE-1C7" secondAttribute="trailingMargin" id="GER-dS-Ymd"/>
+                                                <constraint firstItem="gO3-r6-yId" firstAttribute="centerY" secondItem="tRT-xE-1C7" secondAttribute="centerY" id="2Ja-JS-93C"/>
+                                                <constraint firstItem="gO3-r6-yId" firstAttribute="trailing" secondItem="tRT-xE-1C7" secondAttribute="trailingMargin" id="AzW-dL-Th3"/>
                                                 <constraint firstItem="8qX-zn-LaU" firstAttribute="centerY" secondItem="tRT-xE-1C7" secondAttribute="centerY" id="UQQ-3q-Eer"/>
-                                                <constraint firstItem="DZp-8y-NaC" firstAttribute="centerY" secondItem="tRT-xE-1C7" secondAttribute="centerY" id="fFt-pO-7QN"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -2679,15 +2685,18 @@
                             <outlet property="delegate" destination="cF6-yL-FPd" id="1Wy-Iy-b2i"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="districtBtn" destination="gO3-r6-yId" id="jT9-Qy-K5P"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P3g-VL-rFi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5369" y="506"/>
+            <point key="canvasLocation" x="5368.8000000000002" y="505.54722638680664"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Self Material Immediate Family Table View Controller-->
         <scene sceneID="gG7-AH-mwd">
             <objects>
-                <tableViewController id="R0V-Qr-eo5" sceneMemberID="viewController">
+                <tableViewController id="R0V-Qr-eo5" customClass="SelfMaterialImmediateFamilyTableViewController" customModule="loan" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8Yb-6K-9gq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2799,7 +2808,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Jo-ht-szo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5369" y="927"/>
+            <point key="canvasLocation" x="5369" y="926"/>
         </scene>
         <!--收款银行卡-->
         <scene sceneID="L3e-4N-pMJ">
@@ -2970,10 +2979,10 @@
             </objects>
             <point key="canvasLocation" x="4393" y="1293"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Self Material Neighboring Relative Table View Controller-->
         <scene sceneID="CqD-aq-7fQ">
             <objects>
-                <tableViewController id="xw8-68-bZ3" sceneMemberID="viewController">
+                <tableViewController id="xw8-68-bZ3" customClass="SelfMaterialNeighboringRelativeTableViewController" customModule="loan" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MUC-eW-Zp5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

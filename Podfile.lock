@@ -24,6 +24,7 @@ PODS:
   - Alamofire (4.7.2)
   - HappyDNS (0.3.14)
   - JSONKit-NoWarning (1.2)
+  - MJExtension (3.0.15.1)
   - mob_smssdk (3.2.1):
     - MOBFoundation
   - MOBFoundation (3.1.6)
@@ -36,6 +37,7 @@ DEPENDENCIES:
   - AFNetworking (= 2.5.0)
   - Alamofire (~> 4.7)
   - JSONKit-NoWarning (= 1.2)
+  - MJExtension
   - mob_smssdk
   - Qiniu (~> 7.1)
   - TwicketSegmentedControl
@@ -47,6 +49,7 @@ SPEC REPOS:
     - Alamofire
     - HappyDNS
     - JSONKit-NoWarning
+    - MJExtension
     - mob_smssdk
     - MOBFoundation
     - Qiniu
@@ -58,11 +61,12 @@ SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   HappyDNS: dc6a164ee81979093123c241c6353bcf0218add6
   JSONKit-NoWarning: 3d27e6f9e6846ecf741e8c64dcadd7d5aa7193cb
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   mob_smssdk: edc462704cc07c6d245eee16c4c09ac4f4d53e61
   MOBFoundation: a87c5f11fb87f873337189c3ec0add4d3ec6221a
   Qiniu: 65384bca1cdb0480a68d9b9b8f54db53418c0355
   TwicketSegmentedControl: 6d7a4cf243657e0ac3f00d06d873a25334c04042
 
-PODFILE CHECKSUM: 3bb59ff9daad5856d630efda50122a772d117695
+PODFILE CHECKSUM: b058d7322573e4eedfa3eee49125b81f285f1bf4
 
 COCOAPODS: 1.6.0.beta.1

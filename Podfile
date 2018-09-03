@@ -13,4 +13,5 @@ target 'loan' do
   pod 'AFNetworking', '2.5.0'
   pod 'mob_smssdk'
   pod 'ActionSheetPicker-3.0'
+  pod 'MJExtension'
 end

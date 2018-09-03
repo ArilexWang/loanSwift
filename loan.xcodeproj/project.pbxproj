@@ -11,6 +11,11 @@
 		293BE44A213D0BCA00F49C1C /* CreditCardOwnerMsgTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293BE449213D0BCA00F49C1C /* CreditCardOwnerMsgTableViewController.swift */; };
 		293BE44C213D0BF700F49C1C /* CreditCardMsgTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293BE44B213D0BF700F49C1C /* CreditCardMsgTableViewController.swift */; };
 		293BE450213D150B00F49C1C /* IDMessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293BE44F213D150B00F49C1C /* IDMessageTableViewController.swift */; };
+		293BE453213D310000F49C1C /* SelfMaterialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293BE452213D310000F49C1C /* SelfMaterialViewController.swift */; };
+		293BE455213D313400F49C1C /* SelfMaterialMessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293BE454213D313400F49C1C /* SelfMaterialMessageTableViewController.swift */; };
+		293BE457213D317200F49C1C /* SelfMaterialImmediateFamilyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293BE456213D317200F49C1C /* SelfMaterialImmediateFamilyTableViewController.swift */; };
+		293BE459213D319700F49C1C /* SelfMaterialNeighboringRelativeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293BE458213D319700F49C1C /* SelfMaterialNeighboringRelativeTableViewController.swift */; };
+		293BE45B213D3AF100F49C1C /* address.json in Resources */ = {isa = PBXBuildFile; fileRef = 293BE45A213D3AF100F49C1C /* address.json */; };
 		6E6563DA5066F147D9E65925 /* Pods_loan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F1A7E1AD53F3B28347B01D /* Pods_loan.framework */; };
 		8C49E7002134F89B0047D17A /* resetPassword.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C49E6FE2134F89A0047D17A /* resetPassword.png */; };
 		8C49E7012134F89B0047D17A /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C49E6FF2134F89A0047D17A /* logout.png */; };
@@ -79,6 +84,11 @@
 		293BE449213D0BCA00F49C1C /* CreditCardOwnerMsgTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardOwnerMsgTableViewController.swift; sourceTree = "<group>"; };
 		293BE44B213D0BF700F49C1C /* CreditCardMsgTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardMsgTableViewController.swift; sourceTree = "<group>"; };
 		293BE44F213D150B00F49C1C /* IDMessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDMessageTableViewController.swift; sourceTree = "<group>"; };
+		293BE452213D310000F49C1C /* SelfMaterialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfMaterialViewController.swift; sourceTree = "<group>"; };
+		293BE454213D313400F49C1C /* SelfMaterialMessageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfMaterialMessageTableViewController.swift; sourceTree = "<group>"; };
+		293BE456213D317200F49C1C /* SelfMaterialImmediateFamilyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfMaterialImmediateFamilyTableViewController.swift; sourceTree = "<group>"; };
+		293BE458213D319700F49C1C /* SelfMaterialNeighboringRelativeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfMaterialNeighboringRelativeTableViewController.swift; sourceTree = "<group>"; };
+		293BE45A213D3AF100F49C1C /* address.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = address.json; sourceTree = "<group>"; };
 		88F1A7E1AD53F3B28347B01D /* Pods_loan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_loan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C49E6FE2134F89A0047D17A /* resetPassword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resetPassword.png; sourceTree = "<group>"; };
 		8C49E6FF2134F89A0047D17A /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
@@ -170,6 +180,17 @@
 			path = CreditCard;
 			sourceTree = "<group>";
 		};
+		293BE451213D309400F49C1C /* SelfMaterialMessage */ = {
+			isa = PBXGroup;
+			children = (
+				293BE452213D310000F49C1C /* SelfMaterialViewController.swift */,
+				293BE454213D313400F49C1C /* SelfMaterialMessageTableViewController.swift */,
+				293BE456213D317200F49C1C /* SelfMaterialImmediateFamilyTableViewController.swift */,
+				293BE458213D319700F49C1C /* SelfMaterialNeighboringRelativeTableViewController.swift */,
+			);
+			path = SelfMaterialMessage;
+			sourceTree = "<group>";
+		};
 		655FA2027981FB17AC058176 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +273,8 @@
 		8CB6B102212D9348007CF2D3 /* loan */ = {
 			isa = PBXGroup;
 			children = (
+				293BE45A213D3AF100F49C1C /* address.json */,
+				293BE451213D309400F49C1C /* SelfMaterialMessage */,
 				293BE446213D0ADE00F49C1C /* CreditCard */,
 				8CEA6509213BC2E900AA69E5 /* DetailMessage */,
 				8C9770B12138208F00D1E8BA /* Loan */,
@@ -456,6 +479,7 @@
 				8CB6B133212EEBB2007CF2D3 /* mainpage_unselected@3x.png in Resources */,
 				8CB6B14E21300A33007CF2D3 /* idcard.png in Resources */,
 				8C49E70E21352F950047D17A /* uncheck.png in Resources */,
+				293BE45B213D3AF100F49C1C /* address.json in Resources */,
 				8CB6B13F212EEE32007CF2D3 /* selfBtn_unselected@2x.png in Resources */,
 				8C49E7012134F89B0047D17A /* logout.png in Resources */,
 				8CB6B10E212D9349007CF2D3 /* LaunchScreen.storyboard in Resources */,
@@ -513,6 +537,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/HappyDNS/HappyDNS.framework",
 				"${BUILT_PRODUCTS_DIR}/JSONKit-NoWarning/JSONKit_NoWarning.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/Qiniu/Qiniu.framework",
 				"${BUILT_PRODUCTS_DIR}/TwicketSegmentedControl/TwicketSegmentedControl.framework",
 			);
@@ -523,6 +548,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HappyDNS.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONKit_NoWarning.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Qiniu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwicketSegmentedControl.framework",
 			);
@@ -538,8 +564,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				293BE457213D317200F49C1C /* SelfMaterialImmediateFamilyTableViewController.swift in Sources */,
 				293BE44C213D0BF700F49C1C /* CreditCardMsgTableViewController.swift in Sources */,
 				8C9770A52137C4EC00D1E8BA /* SelfMessageViewController.swift in Sources */,
+				293BE453213D310000F49C1C /* SelfMaterialViewController.swift in Sources */,
 				293BE448213D0B0D00F49C1C /* CreditCardViewController.swift in Sources */,
 				8C94F410213A739400384500 /* LoanMsg.swift in Sources */,
 				8C9770A92137CA8500D1E8BA /* SelfDetailMessageViewController.swift in Sources */,
@@ -548,6 +576,7 @@
 				8CB6B12A212EDC1E007CF2D3 /* SignUpTableViewController.swift in Sources */,
 				8C49E7202136D51E0047D17A /* SelfMsgTableViewController.swift in Sources */,
 				8CEA650B213BC3C200AA69E5 /* IDMessageViewController.swift in Sources */,
+				293BE455213D313400F49C1C /* SelfMaterialMessageTableViewController.swift in Sources */,
 				8C49E71E2136D2DD0047D17A /* ResetPasswordTableViewController.swift in Sources */,
 				8C9770B3213820A600D1E8BA /* LoanListViewController.swift in Sources */,
 				8C49E7222136D52B0047D17A /* OtherMsgTableViewController.swift in Sources */,
@@ -555,6 +584,7 @@
 				8CB6B125212ED6DD007CF2D3 /* LoginByPasswordTableViewController.swift in Sources */,
 				8C94F40C213A4F2100384500 /* User.swift in Sources */,
 				8CB6B106212D9348007CF2D3 /* ViewController.swift in Sources */,
+				293BE459213D319700F49C1C /* SelfMaterialNeighboringRelativeTableViewController.swift in Sources */,
 				8C49E71C213674910047D17A /* SelfViewController.swift in Sources */,
 				8CB6B104212D9348007CF2D3 /* AppDelegate.swift in Sources */,
 				8C9770A32137992800D1E8BA /* ResetPasswordViewController.swift in Sources */,
