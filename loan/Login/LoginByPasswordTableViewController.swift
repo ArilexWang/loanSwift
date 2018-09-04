@@ -8,14 +8,26 @@
 
 import UIKit
 
-class LoginByPasswordTableViewController: UITableViewController {
+class LoginByPasswordTableViewController: UITableViewController,UITextFieldDelegate {
 
-    @IBOutlet weak var accountTextField: UITextField!
+    @IBOutlet weak var accountTextField: UITextField!{
+        didSet{
+            accountTextField.delegate = self
+        }
+    }
     
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!{
+        didSet{
+            passwordTextField.delegate = self
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

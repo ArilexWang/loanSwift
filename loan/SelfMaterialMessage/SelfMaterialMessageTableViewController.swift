@@ -11,7 +11,7 @@ import ActionSheetPicker_3_0
 import MJExtension
 
 
-class SelfMaterialMessageTableViewController: UITableViewController,ActionSheetCustomPickerDelegate {
+class SelfMaterialMessageTableViewController: UITableViewController,ActionSheetCustomPickerDelegate,UITextFieldDelegate {
     
     var picker: ActionSheetCustomPicker?
     
@@ -28,6 +28,21 @@ class SelfMaterialMessageTableViewController: UITableViewController,ActionSheetC
     
     @IBOutlet weak var homeDistrictBtn: UIButton!
     @IBOutlet weak var districtBtn: UIButton!
+    
+    @IBOutlet weak var companyNameTF: UITextField!
+    
+    @IBOutlet weak var positionNameTF: UITextField!
+    
+    @IBOutlet weak var companyTele: UITextField!
+    
+    @IBOutlet weak var workYearTF: UITextField!
+    
+    @IBOutlet weak var companyAdressDetail: UITextField!
+    
+    @IBOutlet weak var monthlyIncomeTF: UITextField!
+    
+    @IBOutlet weak var homeAddressDetailTF: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         calclateFirstData()
@@ -195,6 +210,11 @@ class SelfMaterialMessageTableViewController: UITableViewController,ActionSheetC
         }
         
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     

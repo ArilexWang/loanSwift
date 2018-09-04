@@ -8,13 +8,23 @@
 
 import UIKit
 
-class SelfMaterialNeighboringRelativeTableViewController: UITableViewController {
+class SelfMaterialNeighboringRelativeTableViewController: UITableViewController,UITextFieldDelegate {
 
+    @IBOutlet weak var nameTF: UITextField!
+    
+    @IBOutlet weak var phoneNumberTF: UITextField!
+    
+    @IBOutlet weak var relationshipTF: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
 
 }

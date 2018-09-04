@@ -69,6 +69,14 @@ class ResetPasswordTableViewController: UITableViewController {
     
     @IBAction func sendBtnClick(_ sender: UIButton) {
         isCounting = true
+        let tele = phoneNumberTF.text
+        SMSSDK .getVerificationCode(by: SMSGetCodeMethod.SMS, phoneNumber: tele, zone: "86") { (error) in
+            if (error != nil){
+                print("success")
+            } else {
+                
+            }
+        }
     }
     
     

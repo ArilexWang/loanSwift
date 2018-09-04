@@ -38,7 +38,20 @@ class SignUpViewController: UIViewController {
                 //发送注册请求
                 Alamofire.request(RegisterURL, method: .post, parameters: para, encoding: JSONEncoding.default).responseJSON { (response) in
                     if(response.result.isSuccess) {
-                        print(response.result.value)
+                        let dic = response.result.value as? [String: AnyObject]
+                        if (dic!["result"] as! String != "success"){
+                            let alertController = UIAlertController(title: nil,
+                                                                    message: dic!["result"] as! String, preferredStyle: .alert)
+                            let cancelAction = UIAlertAction(title: "确定", style: .cancel, handler: nil)
+                            alertController.addAction(cancelAction)
+                            self.present(alertController, animated: true, completion: nil)
+                        } else {
+                            isLogin = true
+                            userInfo.id = String(format: "%d", (dic!["id"] as! Int))
+                            userInfo.phone = dic!["phone"] as! String
+                            userMesaage = dic
+                            self.navigationController?.popViewController(animated: true)
+                        }
                     } else {
                         print(response.debugDescription)
                     }

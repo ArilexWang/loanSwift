@@ -64,6 +64,7 @@ class MainViewController: UIViewController,UICollectionViewDataSource,UICollecti
         super.viewDidLoad()
 
         self.navigationController?.isNavigationBarHidden = true
+
     }
     
     

@@ -14,8 +14,7 @@ var userInfo = UserInfo()
 
 var isLogin = false
 
-
-//let token = "93L43E91oA1cbC9k40ZK2eSeOCqxxjJz1SsL4NGv:AKd2pGlo_zch4BJBLr5wsWZLV5Y=:eyJzY29wZSI6IjUxYmllc2h1IiwiZGVhZGxpbmUiOjE1NTM1MTIwMDJ9"
+var userMesaage: Dictionary<String, Any>?
 
 
 let kQiniuBucket = "qiniubucket"
@@ -52,4 +51,6 @@ let HOST = "http://212.64.32.162:3099/Loan/"
 let LoginURL = "http://212.64.32.162:3099/Loan/login"
 
 let RegisterURL = "http://212.64.32.162:3099/Loan/register"
+
+let ResetPasswordURL = "http://212.64.32.162:3099/Loan/update_password"
 

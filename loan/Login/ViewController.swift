@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     
     var loginByAccount: LoginByPasswordTableViewController?
     
+    var loginFlag = true //为true时短信验证登录，为false时账号密码登录
     
     
     override func viewDidLoad() {
@@ -52,23 +53,81 @@ class ViewController: UIViewController {
     //登录点击事件
     @IBAction func signinBtnClick(_ sender: UIButton) {
         
-//        let account = self.loginByAccount?.accountTextField.text
-//        let password = self.loginByAccount?.passwordTextField.text
+        let account = self.loginByAccount?.accountTextField.text
+        let password = self.loginByAccount?.passwordTextField.text
+        
+        
+        let phone = self.loginByPhoneNumberTVC?.phoneNumber.text
+        let code = self.loginByPhoneNumberTVC?.msgCode.text
         
         let para:Dictionary = [
-            "phone": "13583923827",
-            "password": "12345",
+            "phone": account,
+            "password": password,
             "login_manner": "password"
         ]
-        Alamofire.request(LoginURL, method: .post, parameters: para, encoding: JSONEncoding.default).responseJSON { (response) in
-            if(response.result.isSuccess) {
-                isLogin = true
-                let dic = response.result.value as? [String: AnyObject]
-                userInfo.id = String(format: "%d", (dic!["id"] as! Int))
-                userInfo.phone = dic!["phone"] as! String
-                self.navigationController?.popViewController(animated: true)
-            } else {
-                print(response.debugDescription)
+        
+        let messagePara = [
+            "phone" : phone,
+            "login_manner": "code",
+            "verify_code":"3099"
+        ]
+        
+        //账号密码登录
+        if !loginFlag {
+            Alamofire.request(LoginURL, method: .post, parameters: para, encoding: JSONEncoding.default).responseJSON { (response) in
+                if(response.result.isSuccess) {
+                    let dic = response.result.value as? [String: AnyObject]
+                    if (dic!["result"] as! String != "success"){
+                        let alertController = UIAlertController(title: nil,
+                                                                message: dic!["result"] as! String, preferredStyle: .alert)
+                        let cancelAction = UIAlertAction(title: "确定", style: .cancel, handler: nil)
+                        alertController.addAction(cancelAction)
+                        self.present(alertController, animated: true, completion: nil)
+                    } else {
+                        isLogin = true
+                        userInfo.id = String(format: "%d", (dic!["id"] as! Int))
+                        userInfo.phone = dic!["phone"] as! String
+                        userMesaage = dic
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                    
+                } else {
+                    print(response.debugDescription)
+                }
+            }
+        } else {  //短信快捷登录
+            SMSSDK.commitVerificationCode(code, phoneNumber: phone, zone: "86") { (error) in
+                //验证成功
+                if (error.debugDescription == "nil"){
+                    
+                    //发送登录请求
+                    Alamofire.request(LoginURL, method: .post, parameters: messagePara, encoding: JSONEncoding.default).responseJSON { (response) in
+                        if(response.result.isSuccess) {
+                            let dic = response.result.value as? [String: AnyObject]
+                            if (dic!["result"] as! String != "success"){
+                                let alertController = UIAlertController(title: nil,
+                                                                        message: dic!["result"] as! String, preferredStyle: .alert)
+                                let cancelAction = UIAlertAction(title: "确定", style: .cancel, handler: nil)
+                                alertController.addAction(cancelAction)
+                                self.present(alertController, animated: true, completion: nil)
+                            } else {
+                                isLogin = true
+                                userInfo.id = String(format: "%d", (dic!["id"] as! Int))
+                                userInfo.phone = dic!["phone"] as! String
+                                userMesaage = dic
+                                self.navigationController?.popViewController(animated: true)
+                            }
+                        } else {
+                            print(response.debugDescription)
+                        }
+                    }
+                } else {  //失败
+                    let alertController = UIAlertController(title: nil,
+                                                            message: "验证码输入错误", preferredStyle: .alert)
+                    let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+                    alertController.addAction(cancelAction)
+                    self.present(alertController, animated: true, completion: nil)
+                }
             }
         }
     }
@@ -105,10 +164,12 @@ extension ViewController: TwicketSegmentedControlDelegate {
             loginByPassword.isHidden = true
             loginWithCellphoneNumberContentTableView.isHidden = false
             signUpBtn.isHidden = false
+            loginFlag = true
         case 1:
             loginByPassword.isHidden = false
             loginWithCellphoneNumberContentTableView.isHidden = true
             signUpBtn.isHidden = true
+            loginFlag = false
         default:
             break
         }

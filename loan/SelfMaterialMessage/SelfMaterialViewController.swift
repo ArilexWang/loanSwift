@@ -33,6 +33,12 @@ class SelfMaterialViewController: UIViewController {
         }
     }
 
-
+    @IBAction func submitBtnClick(_ sender: UIButton) {
+        
+        
+        
+        
+    }
+    
 
 }

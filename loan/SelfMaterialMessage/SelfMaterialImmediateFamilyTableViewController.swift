@@ -8,15 +8,27 @@
 
 import UIKit
 
-class SelfMaterialImmediateFamilyTableViewController: UITableViewController {
+class SelfMaterialImmediateFamilyTableViewController: UITableViewController,UITextFieldDelegate {
 
+    @IBOutlet weak var nameTF: UITextField!
+    
+    @IBOutlet weak var phoneNumberTF: UITextField!
+    
+    @IBOutlet weak var relationshipTF: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
 
     }
 
-
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    
 
 
 }

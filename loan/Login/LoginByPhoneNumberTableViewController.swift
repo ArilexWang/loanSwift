@@ -71,7 +71,14 @@ class LoginByPhoneNumberTableViewController: UITableViewController,UITextFieldDe
     
     @IBAction func sendBtnClick(_ sender: UIButton) {
         isCounting = true
-        
+        let tele = phoneNumber.text
+        SMSSDK .getVerificationCode(by: SMSGetCodeMethod.SMS, phoneNumber: tele, zone: "86") { (error) in
+            if (error != nil){
+                print("success")
+            } else {
+                
+            }
+        }
     }
     
     func enableSendBtn(){
@@ -110,6 +117,10 @@ class LoginByPhoneNumberTableViewController: UITableViewController,UITextFieldDe
         
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
 
 

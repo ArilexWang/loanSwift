@@ -8,21 +8,41 @@
 
 import UIKit
 
-class SignUpTableViewController: UITableViewController {
+class SignUpTableViewController: UITableViewController,UITextFieldDelegate {
 
     @IBOutlet weak var ImgCodeView: NNValidationView!
     
     @IBOutlet weak var sendButton: UIButton!
     
-    @IBOutlet weak var phoneNumberTF: UITextField!
+    @IBOutlet weak var phoneNumberTF: UITextField!{
+        didSet {
+            phoneNumberTF.delegate = self
+        }
+    }
     
-    @IBOutlet weak var imageCodeTF: UITextField!
+    @IBOutlet weak var imageCodeTF: UITextField!{
+        didSet {
+            imageCodeTF.delegate = self
+        }
+    }
     
-    @IBOutlet weak var codeTF: UITextField!
+    @IBOutlet weak var codeTF: UITextField!{
+        didSet {
+            codeTF.delegate = self
+        }
+    }
     
-    @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!{
+        didSet {
+            passwordTF.delegate = self
+        }
+    }
     
-    @IBOutlet weak var referrerIDTF: UITextField!
+    @IBOutlet weak var referrerIDTF: UITextField!{
+        didSet {
+            referrerIDTF.delegate = self
+        }
+    }
     
     var countdownTimer: Timer?
     
@@ -115,6 +135,11 @@ class SignUpTableViewController: UITableViewController {
             isImageCodeCorrect = true
         }
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
 }
