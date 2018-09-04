@@ -77,6 +77,7 @@ class ViewController: UIViewController {
             Alamofire.request(LoginURL, method: .post, parameters: para, encoding: JSONEncoding.default).responseJSON { (response) in
                 if(response.result.isSuccess) {
                     let dic = response.result.value as? [String: AnyObject]
+                    print(dic)
                     if (dic!["result"] as! String != "success"){
                         let alertController = UIAlertController(title: nil,
                                                                 message: dic!["result"] as! String, preferredStyle: .alert)

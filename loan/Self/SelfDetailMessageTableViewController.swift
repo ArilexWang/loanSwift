@@ -27,16 +27,16 @@ class SelfDetailMessageTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(userMesaage)
-        if (userMesaage!["detailed_info"] as! Bool)  {
+        print(userMesaage!["bank_card_info"] as! Int)
+        if ((userMesaage!["detailed_info"] as! Int) != 0)  {
             materialMessageLable.text = "已填写"
             materialMessageLable.textColor = #colorLiteral(red: 0.7803921569, green: 0.7803921569, blue: 0.8039215686, alpha: 1)
         }
-        if (userMesaage!["verified_info"] as! Bool)  {
+        if ((userMesaage!["verified_info"] as! Int) != 0)  {
             idMessageLable.text = "已填写"
             idMessageLable.textColor = #colorLiteral(red: 0.7803921569, green: 0.7803921569, blue: 0.8039215686, alpha: 1)
         }
-        if (userMesaage!["bank_card_info"] as! Bool)  {
+        if ((userMesaage!["bank_card_info"] as! Int) != 0)  {
             creditCardLable.text = "已填写"
             creditCardLable.textColor = #colorLiteral(red: 0.7803921569, green: 0.7803921569, blue: 0.8039215686, alpha: 1)
         }
