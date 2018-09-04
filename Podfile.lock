@@ -28,6 +28,9 @@ PODS:
   - mob_smssdk (3.2.1):
     - MOBFoundation
   - MOBFoundation (3.1.6)
+  - NVActivityIndicatorView (4.3.0):
+    - NVActivityIndicatorView/Presenter (= 4.3.0)
+  - NVActivityIndicatorView/Presenter (4.3.0)
   - Qiniu (7.2.4):
     - HappyDNS (~> 0.3)
   - TwicketSegmentedControl (0.1.2)
@@ -39,6 +42,7 @@ DEPENDENCIES:
   - JSONKit-NoWarning (= 1.2)
   - MJExtension
   - mob_smssdk
+  - NVActivityIndicatorView
   - Qiniu (~> 7.1)
   - TwicketSegmentedControl
 
@@ -52,6 +56,7 @@ SPEC REPOS:
     - MJExtension
     - mob_smssdk
     - MOBFoundation
+    - NVActivityIndicatorView
     - Qiniu
     - TwicketSegmentedControl
 
@@ -64,9 +69,10 @@ SPEC CHECKSUMS:
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
   mob_smssdk: edc462704cc07c6d245eee16c4c09ac4f4d53e61
   MOBFoundation: a87c5f11fb87f873337189c3ec0add4d3ec6221a
+  NVActivityIndicatorView: 963f62bf9f993fcf23218e55958e5b1761b9504c
   Qiniu: 65384bca1cdb0480a68d9b9b8f54db53418c0355
   TwicketSegmentedControl: 6d7a4cf243657e0ac3f00d06d873a25334c04042
 
-PODFILE CHECKSUM: b058d7322573e4eedfa3eee49125b81f285f1bf4
+PODFILE CHECKSUM: 464bacfd9f4d03ffc019d5e3c6c58084c361086c
 
 COCOAPODS: 1.6.0.beta.1

@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 class MainViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
     
     let cellSizes = Array( repeatElement(CGSize(width:55, height:34), count: 5))

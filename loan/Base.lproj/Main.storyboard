@@ -742,6 +742,18 @@
                                             <action selector="submitBtnClick:" destination="bqc-zr-gmO" eventType="touchUpInside" id="S6c-Xp-2xF"/>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dxk-0L-hFE" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                        <rect key="frame" x="162.5" y="252" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="SND-EL-9qX"/>
+                                            <constraint firstAttribute="height" constant="50" id="xYG-oL-zrW"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Uqu-r5-4G7" firstAttribute="top" secondItem="yru-jK-98R" secondAttribute="top" constant="8" id="6Ax-hF-pzu"/>
@@ -760,6 +772,7 @@
                                     <constraint firstAttribute="bottom" secondItem="0of-Wu-iRi" secondAttribute="bottom" constant="20" id="cmb-aU-D1c"/>
                                     <constraint firstItem="7Q1-N3-MZR" firstAttribute="top" secondItem="yru-jK-98R" secondAttribute="top" id="dvB-h5-J2P"/>
                                     <constraint firstItem="IGf-CH-18j" firstAttribute="centerX" secondItem="7Q1-N3-MZR" secondAttribute="centerX" id="eP1-co-6U6"/>
+                                    <constraint firstItem="dxk-0L-hFE" firstAttribute="centerX" secondItem="yru-jK-98R" secondAttribute="centerX" id="j9B-XN-wfm"/>
                                     <constraint firstAttribute="trailing" secondItem="SGX-2q-EWL" secondAttribute="trailing" id="lUc-AQ-jNY"/>
                                     <constraint firstItem="lIB-bC-pES" firstAttribute="leading" secondItem="yru-jK-98R" secondAttribute="leading" id="m6b-Go-8gG"/>
                                     <constraint firstItem="hUJ-Zk-NoR" firstAttribute="top" secondItem="Uqu-r5-4G7" secondAttribute="bottom" constant="8" id="ofk-X2-akn"/>
@@ -768,6 +781,7 @@
                                     <constraint firstItem="SGX-2q-EWL" firstAttribute="leading" secondItem="yru-jK-98R" secondAttribute="leading" id="t2g-0e-L9p"/>
                                     <constraint firstItem="0of-Wu-iRi" firstAttribute="centerX" secondItem="yru-jK-98R" secondAttribute="centerX" id="uoO-Na-nK8"/>
                                     <constraint firstAttribute="trailing" secondItem="igM-8O-lsz" secondAttribute="trailing" id="yah-U6-QO2"/>
+                                    <constraint firstItem="dxk-0L-hFE" firstAttribute="centerY" secondItem="yru-jK-98R" secondAttribute="centerY" id="zhT-kF-gex"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -784,6 +798,7 @@
                         <outlet property="backIDBtn" destination="OWr-6O-Oal" id="KpW-sG-6as"/>
                         <outlet property="frontIDBtn" destination="5B3-sH-XhZ" id="U8j-j0-PjW"/>
                         <outlet property="holdIDBtn" destination="uys-V9-354" id="TSm-QB-Z68"/>
+                        <outlet property="loadingView" destination="dxk-0L-hFE" id="vV6-M6-aSN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fw3-km-Vyp" userLabel="First Responder" sceneMemberID="firstResponder"/>

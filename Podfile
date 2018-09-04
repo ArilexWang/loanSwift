@@ -14,4 +14,5 @@ target 'loan' do
   pod 'mob_smssdk'
   pod 'ActionSheetPicker-3.0'
   pod 'MJExtension'
+  pod 'NVActivityIndicatorView'
 end

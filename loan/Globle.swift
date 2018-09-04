@@ -48,9 +48,15 @@ func createQiniuToken(fileName: String) -> String {
 
 let HOST = "http://212.64.32.162:3099/Loan/"
 
-let LoginURL = "http://212.64.32.162:3099/Loan/login"
+let LoginURL = HOST + "login"
 
-let RegisterURL = "http://212.64.32.162:3099/Loan/register"
+let RegisterURL = HOST + "register"
 
-let ResetPasswordURL = "http://212.64.32.162:3099/Loan/update_password"
+let ResetPasswordURL = HOST + "update_password"
+
+let UpdateUserInfoURL = HOST + "update_user_info"
+
+let ImageBaseURL = "http://pefmwga0j.bkt.clouddn.com/"
+
+let ImageStyleURL = "?imageMogr2/auto-orient/thumbnail/!50p/blur/1x0/quality/90"
 
