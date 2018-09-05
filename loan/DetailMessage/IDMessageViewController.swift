@@ -30,7 +30,7 @@ class IDMessageViewController: UIViewController,UINavigationControllerDelegate ,
     var holdIDImage: UIImage?
     
     @IBOutlet weak var loadingView: NVActivityIndicatorView!
-    
+    var idMessageTVC: IDMessageTableViewController?
     
     @IBAction func frontIDBtnClick(_ sender: UIButton) {
         let image = UIImagePickerController()
@@ -125,20 +125,17 @@ class IDMessageViewController: UIViewController,UINavigationControllerDelegate ,
                 userMesaage!["id_card_num"] = idMessageTVC?.idNumTF.text
             }
             
-            print(userMesaage)
-            
             Alamofire.request(UpdateUserInfoURL, method: .post, parameters: userMesaage, encoding: JSONEncoding.default).responseJSON { (response) in
                 if(response.result.isSuccess) {
                     let dic = response.result.value as? [String: AnyObject]
                     if (dic!["result"] as! String != "success"){
-                        print(dic)
                         let alertController = UIAlertController(title: nil,
                                                                 message: dic!["result"] as! String, preferredStyle: .alert)
                         let cancelAction = UIAlertAction(title: "确定", style: .cancel, handler: nil)
                         alertController.addAction(cancelAction)
                         self.present(alertController, animated: true, completion: nil)
                     } else {
-                        print(dic)
+                        self.navigationController?.popViewController(animated: true)
                     }
                 } else {
                     print(response.debugDescription)
@@ -155,10 +152,26 @@ class IDMessageViewController: UIViewController,UINavigationControllerDelegate ,
         
     }
     
-    var idMessageTVC: IDMessageTableViewController?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let frontUrl = userMesaage!["card_front_pic_url"]  {
+            let nsFrontUrl = URL(string: frontUrl as! String)
+            let frontImgData = NSData(contentsOf: nsFrontUrl!)
+            frontIDBtn.setImage(UIImage(data: frontImgData as! Data), for: .normal)
+        }
+        if let url = userMesaage!["card_back_pic_url"]  {
+            let nsUrl = URL(string: url as! String)
+            let ImgData = NSData(contentsOf: nsUrl!)
+            backIDBtn.setImage(UIImage(data: ImgData as! Data), for: .normal)
+        }
+        if let url = userMesaage!["card_hand_pic_url"]  {
+            let nsUrl = URL(string: url as! String)
+            let ImgData = NSData(contentsOf: nsUrl!)
+            holdIDBtn.setImage(UIImage(data: ImgData as! Data), for: .normal)
+        }
         
         
         

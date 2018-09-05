@@ -23,9 +23,6 @@ class CreditCardMsgTableViewController: UITableViewController {
             
             self.selectBank = index as! String
             
-            print("value = \(value)")
-            print("index = \(index)")
-            print("picker = \(picker)")
             return
         }, cancel: { ActionStringCancelBlock in return }, origin: sender)
         

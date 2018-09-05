@@ -45,9 +45,33 @@ class SelfMaterialMessageTableViewController: UITableViewController,ActionSheetC
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         calclateFirstData()
-
-      
+        
+        if let str = userMesaage!["residential_address"] {
+            homeDistrictBtn.setTitle(str as? String, for: .normal)
+        }
+        if let str = userMesaage!["company_address"] {
+            districtBtn.setTitle(str as? String, for: .normal)
+        }
+        if let str = userMesaage!["residential_detailed_add"] {
+            homeAddressDetailTF.text = str as? String
+        }
+        if let str = userMesaage!["company_detailed_add"] {
+            companyAdressDetail.text = str as? String
+        }
+        if let str = userMesaage!["position"] {
+            positionNameTF.text = str as? String
+        }
+        if let str = userMesaage!["mon_salary"] {
+            monthlyIncomeTF.text = str as? String
+        }
+        if let str = userMesaage!["working_year"] {
+            workYearTF.text = str as? String
+        }
+        if let str = userMesaage!["company_name"] {
+            companyNameTF.text = str as? String
+        }
     }
     
     func loadFirstData(){

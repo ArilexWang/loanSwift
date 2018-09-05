@@ -16,8 +16,9 @@ class IDMessageTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        nameTF.text = userMesaage!["user_name"] as! String
+        idNumTF.text = userMesaage!["id_card_num"] as! String
+        
     }
 
 

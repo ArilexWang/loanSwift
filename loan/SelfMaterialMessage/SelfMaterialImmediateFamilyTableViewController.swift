@@ -19,8 +19,16 @@ class SelfMaterialImmediateFamilyTableViewController: UITableViewController,UITe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        
+        if let str = userMesaage!["dr_name"] {
+            nameTF.text = str as? String
+        }
+        if let str = userMesaage!["dr_phone"] {
+            phoneNumberTF.text = str as? String
+        }
+        if let str = userMesaage!["dr_relationship"] {
+            relationshipTF.text = str as? String
+        }
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

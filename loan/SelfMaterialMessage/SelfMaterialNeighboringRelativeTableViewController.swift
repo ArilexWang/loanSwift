@@ -18,7 +18,15 @@ class SelfMaterialNeighboringRelativeTableViewController: UITableViewController,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let str = userMesaage!["oc_name"] {
+            nameTF.text = str as? String
+        }
+        if let str = userMesaage!["oc_phone"] {
+            nameTF.text = str as? String
+        }
+        if let str = userMesaage!["oc_relationship"] {
+            relationshipTF.text = str as? String
+        }
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

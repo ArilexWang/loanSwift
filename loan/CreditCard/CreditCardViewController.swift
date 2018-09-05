@@ -16,10 +16,8 @@ class CreditCardViewController: UIViewController {
     
     @IBAction func submitBtnClick(_ sender: UIButton) {
         
-        print(bankTVC?.selectBank)
-        print(bankTVC?.creditCardIDTF.text)
-        print(ownerMsgTVC?.creditCardOwnerTF.text)
-        print(ownerMsgTVC?.creditCardOwnerIDTF.text)
+        
+        
         
     }
     override func viewDidLoad() {
