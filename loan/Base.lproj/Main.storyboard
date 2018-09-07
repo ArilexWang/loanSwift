@@ -493,7 +493,7 @@
         <scene sceneID="II4-aE-rhP">
             <objects>
                 <tableViewController id="uF2-WS-8Hg" customClass="IDMessageTableViewController" customModule="loan" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mej-1D-Fsj">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="mej-1D-Fsj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -517,7 +517,10 @@
                                                     <rect key="frame" x="216" y="19.5" width="143" height="21"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="uF2-WS-8Hg" id="5Vy-ES-m35"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -548,7 +551,10 @@
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="uF2-WS-8Hg" id="JO2-Jl-x0I"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -1003,6 +1009,13 @@
                                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="confirm2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Uty-6h-yCb">
+                                        <rect key="frame" x="37" y="88" width="300" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="300" id="5Wd-BI-SQe"/>
+                                            <constraint firstAttribute="height" constant="48" id="JlO-3w-pyh"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1011,8 +1024,10 @@
                                     <constraint firstAttribute="trailing" secondItem="HAT-YW-3tN" secondAttribute="trailing" constant="8" id="JBq-Nz-l62"/>
                                     <constraint firstItem="yT7-e6-I24" firstAttribute="leading" secondItem="bXn-op-MZZ" secondAttribute="leading" constant="8" id="LcX-8s-DhQ"/>
                                     <constraint firstItem="HAT-YW-3tN" firstAttribute="top" secondItem="yT7-e6-I24" secondAttribute="bottom" constant="8" id="NXA-eb-b7I"/>
+                                    <constraint firstItem="Uty-6h-yCb" firstAttribute="top" secondItem="pKM-5Z-bdY" secondAttribute="bottom" constant="16" id="VN6-tq-e1Z"/>
                                     <constraint firstItem="HAT-YW-3tN" firstAttribute="centerX" secondItem="bXn-op-MZZ" secondAttribute="centerX" id="a7g-Zn-n34"/>
                                     <constraint firstItem="pKM-5Z-bdY" firstAttribute="top" secondItem="HAT-YW-3tN" secondAttribute="bottom" constant="8" id="hNB-5o-Bnw"/>
+                                    <constraint firstItem="Uty-6h-yCb" firstAttribute="centerX" secondItem="bXn-op-MZZ" secondAttribute="centerX" id="lhb-Lu-PXc"/>
                                     <constraint firstItem="yT7-e6-I24" firstAttribute="top" secondItem="bXn-op-MZZ" secondAttribute="top" constant="8" id="p2E-7q-1t2"/>
                                     <constraint firstItem="HAT-YW-3tN" firstAttribute="leading" secondItem="bXn-op-MZZ" secondAttribute="leading" constant="8" id="pLo-Lg-yln"/>
                                     <constraint firstItem="pKM-5Z-bdY" firstAttribute="leading" secondItem="UoY-cb-4vq" secondAttribute="trailing" id="qm5-ti-iY5"/>
@@ -1224,10 +1239,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zCr-cs-0bs"/>
                     </view>
+                    <connections>
+                        <outlet property="bigMoneyLable" destination="pKM-5Z-bdY" id="Yqj-qw-p2k"/>
+                        <outlet property="eachMonthMoneyLable" destination="qi4-MC-uPI" id="z4P-dJ-oMq"/>
+                        <outlet property="idLable" destination="fbi-6I-LwJ" id="W1i-kE-tij"/>
+                        <outlet property="moneyLable" destination="bqz-Hp-Wvp" id="fRY-zq-6Vg"/>
+                        <outlet property="monthLable" destination="P8p-SE-tBr" id="52e-vK-hCH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NzQ-Bc-J5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="918" y="1798"/>
+            <point key="canvasLocation" x="917.60000000000002" y="1797.7511244377813"/>
         </scene>
         <!--我的借款-->
         <scene sceneID="fI2-7j-Y7F">
@@ -1241,7 +1263,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LoanMsg" rowHeight="123" id="L7d-yd-mwl">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LoanMsg" rowHeight="123" id="L7d-yd-mwl" customClass="LoanMsgTableViewCell" customModule="loan" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="123"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L7d-yd-mwl" id="ZxV-PX-Kdk">
@@ -1386,6 +1408,12 @@
                                                 <constraint firstItem="Lc3-8D-K45" firstAttribute="centerY" secondItem="goB-t2-KMD" secondAttribute="centerY" id="xyq-fW-PCp"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="eachMonthMoneyLable" destination="arH-LN-zcr" id="sdz-uz-JQA"/>
+                                            <outlet property="idLabel" destination="mRJ-GR-q2T" id="xeo-W3-2xi"/>
+                                            <outlet property="moneyLable" destination="srd-WE-yvQ" id="59a-KP-7oB"/>
+                                            <outlet property="monthLabel" destination="sJG-cv-Mqn" id="5yC-te-IRz"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -2122,6 +2150,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="IaC-gG-CFT" id="AR5-hL-h5N"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -2154,6 +2185,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="IaC-gG-CFT" id="dXF-51-RmR"/>
+                                                    </connections>
                                                 </textField>
                                                 <view contentMode="scaleToFill" restorationIdentifier="codeViewRef" translatesAutoresizingMaskIntoConstraints="NO" id="6vh-3O-WZG" customClass="NNValidationView">
                                                     <rect key="frame" x="243" y="12.5" width="116" height="35"/>
@@ -2233,7 +2267,10 @@
                                                     <rect key="frame" x="119" y="21" width="120.5" height="17"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="IaC-gG-CFT" id="w6Q-Uh-vBN"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -2263,6 +2300,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="IaC-gG-CFT" id="5sH-jq-T8L"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -3280,6 +3320,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="bankBtn" destination="zO8-qj-QvC" id="sf6-c1-xjA"/>
                         <outlet property="creditCardIDTF" destination="QIY-7X-gbR" id="yYt-xo-aDg"/>
                     </connections>
                 </tableViewController>
@@ -3517,6 +3558,9 @@
                                                 <color key="value" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="8QP-nh-clr" id="Qte-G7-hMR"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3567,6 +3611,9 @@
                                 <state key="normal" title="完成">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitBtnClick:" destination="8QP-nh-clr" eventType="touchUpInside" id="czZ-Lr-vqm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3585,6 +3632,7 @@
                         <outlet property="loanMonthLbl" destination="9gz-lB-zBg" id="ZEq-cF-abF"/>
                         <outlet property="loanNumLbl" destination="xEB-mh-teq" id="J5u-5L-rDx"/>
                         <outlet property="paybackLbl" destination="Tnt-87-x87" id="ACW-Xi-daq"/>
+                        <outlet property="referrerIDTF" destination="4HE-vZ-z3J" id="48N-wc-gFh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nzt-kb-Sgk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3823,13 +3871,14 @@
         <image name="check.png" width="36" height="34"/>
         <image name="clickTo.png" width="29" height="58"/>
         <image name="coin" width="25" height="25"/>
+        <image name="confirm2.png" width="636" height="97"/>
         <image name="exam.png" width="60" height="59"/>
         <image name="flex.png" width="60" height="54"/>
         <image name="idback.png" width="707" height="438"/>
         <image name="idcard.png" width="120" height="121"/>
         <image name="idfont.png" width="707" height="439"/>
         <image name="idhold.png" width="869" height="538"/>
-        <image name="loanBtn.png" width="284" height="277"/>
+        <image name="loanBtn.png" width="216" height="212"/>
         <image name="loanImg.png" width="57" height="43"/>
         <image name="lock.png" width="35" height="54"/>
         <image name="lockImg.png" width="169" height="165"/>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreditCardOwnerMsgTableViewController: UITableViewController {
+class CreditCardOwnerMsgTableViewController: UITableViewController,UITextFieldDelegate {
 
     @IBOutlet weak var creditCardOwnerTF: UITextField!
     
@@ -16,10 +16,20 @@ class CreditCardOwnerMsgTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-      
+        
+        if let str = userMesaage!["bank_card_owner_id_num"] {
+            creditCardOwnerIDTF.text = str as? String
+        }
+        if let str = userMesaage!["bank_card_owner_name"] {
+            creditCardOwnerTF.text = str as? String
+        }
+        
     }
-
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
 
 }

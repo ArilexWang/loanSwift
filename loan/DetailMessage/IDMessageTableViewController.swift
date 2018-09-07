@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IDMessageTableViewController: UITableViewController {
+class IDMessageTableViewController: UITableViewController,UITextFieldDelegate {
 
     @IBOutlet weak var nameTF: UITextField!
     
@@ -16,10 +16,21 @@ class IDMessageTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameTF.text = userMesaage!["user_name"] as! String
-        idNumTF.text = userMesaage!["id_card_num"] as! String
+
+        if let str = userMesaage!["user_name"] {
+            nameTF.text = str as? String
+        }
+        
+        if let str = userMesaage!["id_card_num"] {
+            idNumTF.text = str as? String
+        }
+        
         
     }
-
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
 }

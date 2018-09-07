@@ -56,6 +56,10 @@ let ResetPasswordURL = HOST + "update_password"
 
 let UpdateUserInfoURL = HOST + "update_user_info"
 
+let ApplyNewLoanURL = HOST + "apply_new_loan"
+
+let GetLoansURL = HOST + "get_my_loans"
+
 let ImageBaseURL = "http://pefmwga0j.bkt.clouddn.com/"
 
 let ImageStyleURL = "?imageMogr2/auto-orient/thumbnail/!50p/blur/1x0/quality/90"

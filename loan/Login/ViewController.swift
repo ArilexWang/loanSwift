@@ -86,7 +86,7 @@ class ViewController: UIViewController {
                         self.present(alertController, animated: true, completion: nil)
                     } else {
                         isLogin = true
-                        userInfo.id = String(format: "%d", (dic!["id"] as! Int))
+                        userInfo.id = dic!["id"] as! String
                         userInfo.phone = dic!["phone"] as! String
                         userMesaage = dic
                         self.navigationController?.popViewController(animated: true)
@@ -113,7 +113,7 @@ class ViewController: UIViewController {
                                 self.present(alertController, animated: true, completion: nil)
                             } else {
                                 isLogin = true
-                                userInfo.id = String(format: "%d", (dic!["id"] as! Int))
+                                userInfo.id = dic!["id"] as! String
                                 userInfo.phone = dic!["phone"] as! String
                                 userMesaage = dic
                                 self.navigationController?.popViewController(animated: true)

@@ -22,7 +22,7 @@ class SelfMaterialNeighboringRelativeTableViewController: UITableViewController,
             nameTF.text = str as? String
         }
         if let str = userMesaage!["oc_phone"] {
-            nameTF.text = str as? String
+            phoneNumberTF.text = str as? String
         }
         if let str = userMesaage!["oc_relationship"] {
             relationshipTF.text = str as? String

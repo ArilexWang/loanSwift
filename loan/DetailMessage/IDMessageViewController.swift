@@ -11,7 +11,7 @@ import Photos
 import Alamofire
 import NVActivityIndicatorView
 
-class IDMessageViewController: UIViewController,UINavigationControllerDelegate , UIImagePickerControllerDelegate,NVActivityIndicatorViewable {
+class IDMessageViewController: UIViewController,UINavigationControllerDelegate , UIImagePickerControllerDelegate,NVActivityIndicatorViewable,UITextFieldDelegate {
 
     @IBOutlet weak var frontIDBtn: UIButton!
     var frontImgUrl: String?
@@ -118,12 +118,15 @@ class IDMessageViewController: UIViewController,UINavigationControllerDelegate ,
             if userMesaage!["card_hand_pic_url"] != nil {
                 userMesaage!["card_hand_pic_url"] = holdImgUrl
             }
+            
             if userMesaage!["user_name"] != nil {
                 userMesaage!["user_name"] = idMessageTVC?.nameTF.text
             }
             if userMesaage!["id_card_num"] != nil {
                 userMesaage!["id_card_num"] = idMessageTVC?.idNumTF.text
             }
+            
+            
             
             Alamofire.request(UpdateUserInfoURL, method: .post, parameters: userMesaage, encoding: JSONEncoding.default).responseJSON { (response) in
                 if(response.result.isSuccess) {
@@ -135,9 +138,11 @@ class IDMessageViewController: UIViewController,UINavigationControllerDelegate ,
                         alertController.addAction(cancelAction)
                         self.present(alertController, animated: true, completion: nil)
                     } else {
+                        
                         self.navigationController?.popViewController(animated: true)
                     }
                 } else {
+                    
                     print(response.debugDescription)
                 }
             }
@@ -158,21 +163,44 @@ class IDMessageViewController: UIViewController,UINavigationControllerDelegate ,
         super.viewDidLoad()
         
         if let frontUrl = userMesaage!["card_front_pic_url"]  {
-            let nsFrontUrl = URL(string: frontUrl as! String)
-            let frontImgData = NSData(contentsOf: nsFrontUrl!)
-            frontIDBtn.setImage(UIImage(data: frontImgData as! Data), for: .normal)
+            if !(frontUrl is NSNull){
+                let nsFrontUrl = URL(string: frontUrl as! String)
+                if (nsFrontUrl != nil){
+                    let frontImgData = NSData(contentsOf: nsFrontUrl!)
+                    frontIDBtn.setImage(UIImage(data: frontImgData as! Data), for: .normal)
+                    frontImgUrl = frontUrl as! String
+                }
+            }
+            
+
+            
         }
         if let url = userMesaage!["card_back_pic_url"]  {
-            let nsUrl = URL(string: url as! String)
-            let ImgData = NSData(contentsOf: nsUrl!)
-            backIDBtn.setImage(UIImage(data: ImgData as! Data), for: .normal)
+            if url is NSNull {
+                
+            } else {
+                let nsUrl = URL(string: url as! String)
+                if (nsUrl != nil){
+                    let ImgData = NSData(contentsOf: nsUrl!)
+                    backIDBtn.setImage(UIImage(data: ImgData as! Data), for: .normal)
+                    backImgUrl = url as! String
+                }
+            }
+            
         }
         if let url = userMesaage!["card_hand_pic_url"]  {
-            let nsUrl = URL(string: url as! String)
-            let ImgData = NSData(contentsOf: nsUrl!)
-            holdIDBtn.setImage(UIImage(data: ImgData as! Data), for: .normal)
+            if url is NSNull {
+                
+            } else {
+                let nsUrl = URL(string: url as! String)
+                if (nsUrl != nil){
+                    let ImgData = NSData(contentsOf: nsUrl!)
+                    holdIDBtn.setImage(UIImage(data: ImgData as! Data), for: .normal)
+                    holdImgUrl = url as! String
+                }
+            }
+            
         }
-        
         
         
     }
@@ -187,4 +215,8 @@ class IDMessageViewController: UIViewController,UINavigationControllerDelegate ,
         }
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
