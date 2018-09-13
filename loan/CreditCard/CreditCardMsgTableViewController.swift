@@ -35,15 +35,30 @@ class CreditCardMsgTableViewController: UITableViewController,UITextFieldDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateMsg()
+        
+    }
     
+    func updateMsg(){
         if let str = userMesaage!["bank_card_num"] {
-            creditCardIDTF.text = str as? String
+            if str is NSNull {
+                
+            } else {
+                creditCardIDTF.text = str as? String
+            }
+            
         }
         if let str = userMesaage!["bank_account"] {
-            selectBank = (str as? String)!
-            bankBtn.setTitle(selectBank, for: .normal)
+            if str is NSNull {
+                
+            } else {
+                selectBank = (str as? String)!
+                bankBtn.setTitle(selectBank, for: .normal)
+            }
+            
         }
     }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()

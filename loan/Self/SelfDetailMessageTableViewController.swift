@@ -23,11 +23,20 @@ class SelfDetailMessageTableViewController: UITableViewController {
     
     @IBOutlet weak var creditCardLable: UILabel!
     
+    override func viewWillAppear(_ animated: Bool) {
+        updateMsg()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(userMesaage!["bank_card_info"] as! Int)
+        updateMsg()
+        
+        
+    }
+    
+    func updateMsg(){
+        print(userMesaage)
         if ((userMesaage!["detailed_info"] as! Int) != 0)  {
             materialMessageLable.text = "已填写"
             materialMessageLable.textColor = #colorLiteral(red: 0.7803921569, green: 0.7803921569, blue: 0.8039215686, alpha: 1)
@@ -42,10 +51,12 @@ class SelfDetailMessageTableViewController: UITableViewController {
         }
     }
     
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if delegate != nil {
             delegate?.getSignalFromSelfDetailMsgTVC(controller: self, indexPath: indexPath)
         }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
 

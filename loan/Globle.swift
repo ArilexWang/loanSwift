@@ -13,6 +13,7 @@ import Qiniu
 var userInfo = UserInfo()
 
 var isLogin = false
+var isPerfect = false
 
 var userMesaage: Dictionary<String, Any>?
 

@@ -67,10 +67,23 @@ class MainViewController: UIViewController,UICollectionViewDataSource,UICollecti
     
     
     @IBAction func loanBtnClick(_ sender: UIButton) {
-        if isLogin {
+        if(userMesaage != nil){
+            if ((userMesaage!["detailed_info"] as! Int) != 0)
+                && ((userMesaage!["verified_info"] as! Int) != 0)
+                && ((userMesaage!["bank_card_info"] as! Int) != 0)
+            {
+                isPerfect = true
+            }
+        }
+        
+        
+        if (isLogin && isPerfect) {
             performSegue(withIdentifier: "segueToConfirmLoan", sender: nil)
-        } else {
+        } else if !isLogin {
             performSegue(withIdentifier: "mainSegueToLogin", sender: nil)
+        } else {
+            
+            performSegue(withIdentifier: "mainSegueToInfo", sender: nil)
         }
         
     }

@@ -79,7 +79,7 @@ class SignUpTableViewController: UITableViewController,UITextFieldDelegate {
         willSet {
             if newValue {
                 countdownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(LoginByPhoneNumberTableViewController.updateTime(_:)), userInfo: nil, repeats: true)
-                remainingSeconds = 5
+                remainingSeconds = 60
             } else {
                 countdownTimer?.invalidate()
                 countdownTimer = nil

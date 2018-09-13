@@ -34,6 +34,16 @@ class LoanDetailViewController: UIViewController {
     }
     
     
+    @IBAction func confirmBtnClick(_ sender: UIButton) {
+        let alertController = UIAlertController(title: nil,
+                                                message: "提现失败，资料正在审核中...", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "确定", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

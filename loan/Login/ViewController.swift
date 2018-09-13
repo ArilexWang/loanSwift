@@ -85,11 +85,7 @@ class ViewController: UIViewController {
                         alertController.addAction(cancelAction)
                         self.present(alertController, animated: true, completion: nil)
                     } else {
-                        isLogin = true
-                        userInfo.id = dic!["id"] as! String
-                        userInfo.phone = dic!["phone"] as! String
-                        userMesaage = dic
-                        self.navigationController?.popViewController(animated: true)
+                        self.loginSuccess(dic: dic!)
                     }
                     
                 } else {
@@ -112,11 +108,7 @@ class ViewController: UIViewController {
                                 alertController.addAction(cancelAction)
                                 self.present(alertController, animated: true, completion: nil)
                             } else {
-                                isLogin = true
-                                userInfo.id = dic!["id"] as! String
-                                userInfo.phone = dic!["phone"] as! String
-                                userMesaage = dic
-                                self.navigationController?.popViewController(animated: true)
+                                self.loginSuccess(dic: dic!)
                             }
                         } else {
                             print(response.debugDescription)
@@ -139,6 +131,19 @@ class ViewController: UIViewController {
         
     }
     
+    func loginSuccess(dic: [String: AnyObject]){
+        isLogin = true
+        userInfo.id = dic["id"] as! String
+        userInfo.phone = dic["phone"] as! String
+        userMesaage = dic
+        if ((userMesaage!["detailed_info"] as! Int) != 0)
+            && ((userMesaage!["verified_info"] as! Int) != 0)
+            && ((userMesaage!["bank_card_info"] as! Int) != 0)
+        {
+            isPerfect = true
+        }
+        self.navigationController?.popViewController(animated: true)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {

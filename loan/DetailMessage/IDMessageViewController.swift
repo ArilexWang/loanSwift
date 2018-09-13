@@ -138,7 +138,7 @@ class IDMessageViewController: UIViewController,UINavigationControllerDelegate ,
                         alertController.addAction(cancelAction)
                         self.present(alertController, animated: true, completion: nil)
                     } else {
-                        
+                        userMesaage = dic
                         self.navigationController?.popViewController(animated: true)
                     }
                 } else {

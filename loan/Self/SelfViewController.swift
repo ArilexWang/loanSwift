@@ -90,6 +90,8 @@ class SelfViewController: UIViewController,GetSignalDelegate {
             let okAction = UIAlertAction(title: "好的", style: .default, handler: {
                 action in
                 isLogin = false
+                userMesaage = nil
+                isPerfect = false
                 self.performSegue(withIdentifier: "segueToLogin", sender: nil)
             })
             alertController.addAction(cancelAction)
@@ -116,7 +118,12 @@ class SelfViewController: UIViewController,GetSignalDelegate {
             } else {
                 performSegue(withIdentifier: "segueToLogin", sender: nil)
             }
-            
+        case 2:
+            if isLogin {
+                performSegue(withIdentifier: "segueToPayback", sender: nil)
+            } else {
+                performSegue(withIdentifier: "segueToLogin", sender: nil)
+            }
         default:
             break
         }

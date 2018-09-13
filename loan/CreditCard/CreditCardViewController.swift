@@ -26,6 +26,7 @@ class CreditCardViewController: UIViewController {
         Alamofire.request(UpdateUserInfoURL, method: .post, parameters: userMesaage, encoding: JSONEncoding.default).responseJSON { (response) in
             if(response.result.isSuccess) {
                 let dic = response.result.value as? [String: AnyObject]
+               
                 if (dic!["result"] as! String != "success"){
                     let alertController = UIAlertController(title: nil,
                                                             message: dic!["result"] as! String, preferredStyle: .alert)
@@ -33,7 +34,7 @@ class CreditCardViewController: UIViewController {
                     alertController.addAction(cancelAction)
                     self.present(alertController, animated: true, completion: nil)
                 } else {
-                    
+                    userMesaage = dic
                     self.navigationController?.popViewController(animated: true)
                 }
             } else {
@@ -43,10 +44,10 @@ class CreditCardViewController: UIViewController {
         
         
     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         
         
     }

@@ -66,7 +66,6 @@ class LoanConfirmViewController: UIViewController,UITextFieldDelegate {
                     let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
                     let okAction = UIAlertAction(title: "好的", style: .default, handler: {
                         action in
-                        isLogin = false
                         self.navigationController?.popViewController(animated: true)
                     })
                     alertController.addAction(cancelAction)

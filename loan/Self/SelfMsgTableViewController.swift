@@ -21,7 +21,10 @@ class SelfMsgTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if delegate != nil {
             delegate?.getSignalFromSelfTVC(controller: self, indexPath: indexPath)
+            
         }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
+    
     
 }

@@ -14,6 +14,7 @@ class LoanListViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var emptyView: UIView!
     var selectLoan: LoanMsg?
     var selectID: String?
     
@@ -23,11 +24,31 @@ class LoanListViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     var loans: Array<Any>?
     
+    @IBAction func loanBtnClick(_ sender: UIButton) {
+        if(userMesaage != nil){
+            if ((userMesaage!["detailed_info"] as! Int) != 0)
+                && ((userMesaage!["verified_info"] as! Int) != 0)
+                && ((userMesaage!["bank_card_info"] as! Int) != 0)
+            {
+                isPerfect = true
+            }
+        }
+        if isPerfect {
+            performSegue(withIdentifier: "listToLoan", sender: nil)
+        } else {
+            performSegue(withIdentifier: "listToInfo", sender: nil)
+        }
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.isNavigationBarHidden = false
         self.tabBarController?.tabBar.isHidden = true
+        
+        
         
         let para = [
             "user_id": userMesaage!["id"]
@@ -59,8 +80,17 @@ class LoanListViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let num = loans?.count {
+            if num == 0{
+                emptyView.isHidden = false
+                self.tableView.isHidden = true
+            } else {
+                self.tableView.isHidden = false
+                emptyView.isHidden = true
+            }
             return num
         }
+        self.tableView.isHidden = true
+        self.emptyView.isHidden = false
         return 0
     }
     
@@ -91,6 +121,7 @@ class LoanListViewController: UIViewController,UITableViewDelegate,UITableViewDa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "segueToLoanDetailVC", sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

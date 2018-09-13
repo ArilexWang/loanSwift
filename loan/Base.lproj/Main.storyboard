@@ -182,6 +182,7 @@
                         <segue destination="uq9-x7-kZI" kind="show" identifier="segueToResetPassword" id="Sgl-Ql-bbg"/>
                         <segue destination="t7g-nE-bcn" kind="show" identifier="segueToSelfMsgVC" id="YM8-rP-WWa"/>
                         <segue destination="xCP-SI-PR9" kind="show" identifier="segueToLoanListTVC" id="ISn-Zf-kUI"/>
+                        <segue destination="thq-9P-9je" kind="show" identifier="segueToPayback" id="dmP-IJ-x95"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bYR-aH-fa5" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1188,6 +1189,9 @@
                                         <state key="normal" title="确认提现">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="confirmBtnClick:" destination="dBM-qX-qgF" eventType="touchUpInside" id="di5-us-eYu"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1249,7 +1253,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NzQ-Bc-J5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="917.60000000000002" y="1797.7511244377813"/>
+            <point key="canvasLocation" x="918" y="1798"/>
         </scene>
         <!--我的借款-->
         <scene sceneID="fI2-7j-Y7F">
@@ -1421,24 +1425,81 @@
                                     <outlet property="delegate" destination="xCP-SI-PR9" id="gD8-uo-AGH"/>
                                 </connections>
                             </tableView>
+                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ioa-If-u11">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty.png" translatesAutoresizingMaskIntoConstraints="NO" id="SxT-Fc-5Yc">
+                                        <rect key="frame" x="122" y="50" width="130" height="108"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="108" id="5WP-R3-Prw"/>
+                                            <constraint firstAttribute="width" constant="130" id="L7a-05-LGa"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="无需还款哦！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8D-V5-aP2">
+                                        <rect key="frame" x="135" y="182" width="104" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您还未提交任何借款申请哦。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xk-zR-q6T">
+                                        <rect key="frame" x="74" y="211" width="226" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAE-ZE-NHU">
+                                        <rect key="frame" x="16" y="252" width="343" height="50"/>
+                                        <color key="backgroundColor" red="0.13725490200000001" green="0.74901960779999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="343" id="0pF-oX-Vj3"/>
+                                            <constraint firstAttribute="height" constant="50" id="fSE-Te-r8d"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="去申请借款">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loanBtnClick:" destination="xCP-SI-PR9" eventType="touchUpInside" id="Qjg-Cl-3Q8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="SxT-Fc-5Yc" firstAttribute="centerX" secondItem="ioa-If-u11" secondAttribute="centerX" id="E0y-OM-Vi5"/>
+                                    <constraint firstItem="ZAE-ZE-NHU" firstAttribute="centerX" secondItem="ioa-If-u11" secondAttribute="centerX" id="LDN-RG-tXt"/>
+                                    <constraint firstItem="w8D-V5-aP2" firstAttribute="top" secondItem="SxT-Fc-5Yc" secondAttribute="bottom" constant="24" id="UYq-TX-oGn"/>
+                                    <constraint firstItem="SxT-Fc-5Yc" firstAttribute="top" secondItem="ioa-If-u11" secondAttribute="top" constant="50" id="ZNV-I3-AQI"/>
+                                    <constraint firstItem="w8D-V5-aP2" firstAttribute="centerX" secondItem="ioa-If-u11" secondAttribute="centerX" id="eDA-MP-ozw"/>
+                                    <constraint firstItem="7xk-zR-q6T" firstAttribute="top" secondItem="w8D-V5-aP2" secondAttribute="bottom" constant="8" id="ghr-5X-tTB"/>
+                                    <constraint firstItem="7xk-zR-q6T" firstAttribute="centerX" secondItem="ioa-If-u11" secondAttribute="centerX" id="iQB-4p-Edn"/>
+                                    <constraint firstItem="ZAE-ZE-NHU" firstAttribute="top" secondItem="7xk-zR-q6T" secondAttribute="bottom" constant="20" id="leq-F4-9uX"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dPf-fY-qAU" firstAttribute="leading" secondItem="OMN-af-yPm" secondAttribute="leading" id="0fs-HA-3TG"/>
                             <constraint firstItem="dPf-fY-qAU" firstAttribute="bottom" secondItem="OMN-af-yPm" secondAttribute="bottom" id="1dJ-zy-R3g"/>
+                            <constraint firstItem="ioa-If-u11" firstAttribute="top" secondItem="OMN-af-yPm" secondAttribute="top" id="3tx-3x-RNO"/>
+                            <constraint firstItem="ioa-If-u11" firstAttribute="leading" secondItem="OMN-af-yPm" secondAttribute="leading" id="9Wr-Xp-fBt"/>
                             <constraint firstItem="dPf-fY-qAU" firstAttribute="top" secondItem="OMN-af-yPm" secondAttribute="top" id="fE4-gv-4Rd"/>
+                            <constraint firstItem="ioa-If-u11" firstAttribute="trailing" secondItem="OMN-af-yPm" secondAttribute="trailing" id="su8-TQ-M5i"/>
+                            <constraint firstItem="ioa-If-u11" firstAttribute="bottom" secondItem="OMN-af-yPm" secondAttribute="bottom" id="vvM-Ed-1uY"/>
                             <constraint firstItem="dPf-fY-qAU" firstAttribute="trailing" secondItem="OMN-af-yPm" secondAttribute="trailing" id="xhR-5H-adq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OMN-af-yPm"/>
                     </view>
                     <connections>
+                        <outlet property="emptyView" destination="ioa-If-u11" id="exJ-qI-X1Q"/>
                         <outlet property="tableView" destination="dPf-fY-qAU" id="60K-vE-XBo"/>
                         <segue destination="dBM-qX-qgF" kind="show" identifier="segueToLoanDetailVC" id="Ik5-sr-J6s"/>
+                        <segue destination="8QP-nh-clr" kind="show" identifier="listToLoan" id="E6r-SR-AHw"/>
+                        <segue destination="t7g-nE-bcn" kind="show" identifier="listToInfo" id="Fng-KM-X3z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B6m-S6-UYi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="124" y="1798"/>
+            <point key="canvasLocation" x="124" y="1797.7511244377813"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="Fyw-i3-bl3">
@@ -1796,6 +1857,7 @@
                         <outlet property="smallNumLbl" destination="hXp-fe-MDY" id="igl-Ic-AAq"/>
                         <segue destination="8QP-nh-clr" kind="show" identifier="segueToConfirmLoan" id="Egz-R0-L6J"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="mainSegueToLogin" id="RgW-FX-sCi"/>
+                        <segue destination="t7g-nE-bcn" kind="show" identifier="mainSegueToInfo" id="gjv-IV-UE2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZ8-na-wO0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1906,7 +1968,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="918" y="563"/>
+            <point key="canvasLocation" x="918" y="628"/>
         </scene>
         <!--Login By Phone Number Table View Controller-->
         <scene sceneID="7G7-by-PG5">
@@ -3046,6 +3108,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="HZI-F9-f21" id="bZg-4N-ZNV"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -3077,6 +3142,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="HZI-F9-f21" id="SRe-gf-i8E"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -3235,6 +3303,62 @@
             </objects>
             <point key="canvasLocation" x="5369" y="1231"/>
         </scene>
+        <!--Payback View Controller-->
+        <scene sceneID="Mnc-id-j7U">
+            <objects>
+                <viewController id="thq-9P-9je" customClass="PaybackViewController" customModule="loan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3dd-SF-cST">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyI-es-KSc">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty.png" translatesAutoresizingMaskIntoConstraints="NO" id="KSf-ZP-VNP">
+                                        <rect key="frame" x="122" y="50" width="130" height="108"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="130" id="1G9-V7-ubr"/>
+                                            <constraint firstAttribute="height" constant="108" id="zH7-rI-RgH"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="无需还款哦！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1V-b1-6kR">
+                                        <rect key="frame" x="135" y="182" width="104" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您还未提交任何借款申请哦。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUu-OX-Nf7">
+                                        <rect key="frame" x="74" y="211" width="226" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Z1V-b1-6kR" firstAttribute="centerX" secondItem="lyI-es-KSc" secondAttribute="centerX" id="2n8-ka-9OT"/>
+                                    <constraint firstItem="KSf-ZP-VNP" firstAttribute="centerX" secondItem="lyI-es-KSc" secondAttribute="centerX" id="Gpi-fK-scI"/>
+                                    <constraint firstItem="sUu-OX-Nf7" firstAttribute="centerX" secondItem="lyI-es-KSc" secondAttribute="centerX" id="OPe-na-QDI"/>
+                                    <constraint firstItem="Z1V-b1-6kR" firstAttribute="top" secondItem="KSf-ZP-VNP" secondAttribute="bottom" constant="24" id="YN0-bg-0J1"/>
+                                    <constraint firstItem="sUu-OX-Nf7" firstAttribute="top" secondItem="Z1V-b1-6kR" secondAttribute="bottom" constant="8" id="rzd-g8-hFf"/>
+                                    <constraint firstItem="KSf-ZP-VNP" firstAttribute="top" secondItem="lyI-es-KSc" secondAttribute="top" constant="50" id="vj7-I1-Q69"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lyI-es-KSc" firstAttribute="bottom" secondItem="KaA-OF-Zez" secondAttribute="bottom" id="0pE-uI-KXC"/>
+                            <constraint firstItem="lyI-es-KSc" firstAttribute="trailing" secondItem="KaA-OF-Zez" secondAttribute="trailing" id="JEf-0b-Liz"/>
+                            <constraint firstItem="lyI-es-KSc" firstAttribute="leading" secondItem="KaA-OF-Zez" secondAttribute="leading" id="b3h-R8-B7P"/>
+                            <constraint firstItem="lyI-es-KSc" firstAttribute="top" secondItem="KaA-OF-Zez" secondAttribute="top" id="woA-zZ-uUv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KaA-OF-Zez"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aSw-w5-atR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1769" y="2098"/>
+        </scene>
         <!--Credit Card Msg Table View Controller-->
         <scene sceneID="2W8-Tz-Gbi">
             <objects>
@@ -3301,6 +3425,9 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="0Ks-5n-c3q" id="wwU-Lp-wgP"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -3637,7 +3764,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nzt-kb-Sgk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="918" y="-134"/>
+            <point key="canvasLocation" x="982" y="-135"/>
         </scene>
         <!--我-->
         <scene sceneID="cYI-d5-EuL">
@@ -3872,6 +3999,7 @@
         <image name="clickTo.png" width="29" height="58"/>
         <image name="coin" width="25" height="25"/>
         <image name="confirm2.png" width="636" height="97"/>
+        <image name="empty.png" width="357" height="307"/>
         <image name="exam.png" width="60" height="59"/>
         <image name="flex.png" width="60" height="54"/>
         <image name="idback.png" width="707" height="438"/>
@@ -3898,6 +4026,8 @@
         <image name="uncheck.png" width="26" height="26"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="RgW-FX-sCi"/>
+        <segue reference="E6r-SR-AHw"/>
+        <segue reference="pD2-km-i5a"/>
+        <segue reference="Fng-KM-X3z"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -14,17 +14,27 @@ class CreditCardOwnerMsgTableViewController: UITableViewController,UITextFieldDe
     
     @IBOutlet weak var creditCardOwnerIDTF: UITextField!
     
+    override func viewWillAppear(_ animated: Bool) {
+        updateMsg()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        updateMsg()
+        
+    }
+    
+    
+    func updateMsg(){
         if let str = userMesaage!["bank_card_owner_id_num"] {
             creditCardOwnerIDTF.text = str as? String
         }
         if let str = userMesaage!["bank_card_owner_name"] {
             creditCardOwnerTF.text = str as? String
         }
-        
     }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()

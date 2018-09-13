@@ -81,6 +81,8 @@
 		8CB6B15021300A33007CF2D3 /* bankcard.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB6B14D21300A33007CF2D3 /* bankcard.png */; };
 		8CB6B15221300E36007CF2D3 /* morecard.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB6B15121300E36007CF2D3 /* morecard.png */; };
 		8CEA650B213BC3C200AA69E5 /* IDMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEA650A213BC3C200AA69E5 /* IDMessageViewController.swift */; };
+		8CF0A90B21492FE100DD6E5D /* empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CF0A90A21492FDF00DD6E5D /* empty.png */; };
+		8CF0A90D21493DF400DD6E5D /* PaybackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0A90C21493DF400DD6E5D /* PaybackViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -162,6 +164,8 @@
 		8CB6B14D21300A33007CF2D3 /* bankcard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bankcard.png; sourceTree = "<group>"; };
 		8CB6B15121300E36007CF2D3 /* morecard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = morecard.png; sourceTree = "<group>"; };
 		8CEA650A213BC3C200AA69E5 /* IDMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDMessageViewController.swift; sourceTree = "<group>"; };
+		8CF0A90A21492FDF00DD6E5D /* empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = empty.png; sourceTree = "<group>"; };
+		8CF0A90C21493DF400DD6E5D /* PaybackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaybackViewController.swift; sourceTree = "<group>"; };
 		8D98671DB4AB63A8443FE496 /* Pods-loan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-loan/Pods-loan.debug.xcconfig"; sourceTree = "<group>"; };
 		CD5DABA95AC1C5C6CE5FBF14 /* Pods-loan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loan.release.xcconfig"; path = "Pods/Target Support Files/Pods-loan/Pods-loan.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -244,6 +248,7 @@
 		8C9770AA21381B6F00D1E8BA /* loan */ = {
 			isa = PBXGroup;
 			children = (
+				8CF0A90A21492FDF00DD6E5D /* empty.png */,
 				8CB127822142D71000088DD2 /* confirm2.png */,
 				8CB127802142D68900088DD2 /* confirm.png */,
 				8CB1277E2142D4F300088DD2 /* loanBtn.png */,
@@ -260,6 +265,7 @@
 				8C9770B821383B8000D1E8BA /* LoanDetailViewController.swift */,
 				8C94F40F213A739400384500 /* LoanMsg.swift */,
 				8CB1277C2142D1FD00088DD2 /* LoanMsgTableViewCell.swift */,
+				8CF0A90C21493DF400DD6E5D /* PaybackViewController.swift */,
 			);
 			path = Loan;
 			sourceTree = "<group>";
@@ -504,6 +510,7 @@
 				8CB6B13B212EEC50007CF2D3 /* selfBtn_selected@3x.png in Resources */,
 				8CB6B15021300A33007CF2D3 /* bankcard.png in Resources */,
 				8C49E714213534060047D17A /* apply.png in Resources */,
+				8CF0A90B21492FE100DD6E5D /* empty.png in Resources */,
 				8CB6B14F21300A33007CF2D3 /* msgcard.png in Resources */,
 				8CB6B10B212D9349007CF2D3 /* Assets.xcassets in Resources */,
 				8CB6B146212EF513007CF2D3 /* paybackImg.png in Resources */,
@@ -587,6 +594,7 @@
 				293BE453213D310000F49C1C /* SelfMaterialViewController.swift in Sources */,
 				293BE448213D0B0D00F49C1C /* CreditCardViewController.swift in Sources */,
 				8C94F410213A739400384500 /* LoanMsg.swift in Sources */,
+				8CF0A90D21493DF400DD6E5D /* PaybackViewController.swift in Sources */,
 				8C9770A92137CA8500D1E8BA /* SelfDetailMessageViewController.swift in Sources */,
 				8C94F408213A37F700384500 /* Globle.swift in Sources */,
 				8CB6B121212D9FE4007CF2D3 /* LoginByPhoneNumberTableViewController.swift in Sources */,
@@ -761,13 +769,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 563L8XQYD8;
+				DEVELOPMENT_TEAM = N928N7F4A2;
 				INFOPLIST_FILE = loan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ricardo.com.loan;
+				PRODUCT_BUNDLE_IDENTIFIER = henry.com.loan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "loan/Thirdpart/loan-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -783,13 +791,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 563L8XQYD8;
+				DEVELOPMENT_TEAM = N928N7F4A2;
 				INFOPLIST_FILE = loan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ricardo.com.loan;
+				PRODUCT_BUNDLE_IDENTIFIER = henry.com.loan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "loan/Thirdpart/loan-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
